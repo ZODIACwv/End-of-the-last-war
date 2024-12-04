@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c5myup5lmoj7c"]
+
+[ext_resource type="FontFile" uid="uid://cd4yswfd6fuxv" path="res://assets/fonts/Teko-SemiBold.ttf" id="1_tgcep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_du72l"]
+
+[resource]
+Button/colors/font_color = Color(0.811765, 0.435294, 0.152941, 1)
+Button/colors/font_outline_color = Color(0.368627, 0.180392, 0.0313726, 1)
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_tgcep")
+Button/styles/focus = SubResource("StyleBoxEmpty_du72l")

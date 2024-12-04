@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl28pk2np8oxn"
-path="res://.godot/imported/Human.png-58d8e4237e8c9f45cf1667033987d4c8.ctex"
+uid="uid://cbyvsjl6qt5m0"
+path="res://.godot/imported/human_hurt_leg_right.png-4fe6e60ae508c589b56a5cb2873fef2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resourses/Player/Medicine/Human.png"
-dest_files=["res://.godot/imported/Human.png-58d8e4237e8c9f45cf1667033987d4c8.ctex"]
+source_file="res://assets/sprites/player/medicine/human_hurt/human_hurt_leg_right.png"
+dest_files=["res://.godot/imported/human_hurt_leg_right.png-4fe6e60ae508c589b56a5cb2873fef2e.ctex"]
 
 [params]
 
