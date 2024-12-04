@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://p6kes3rf8cma"]
+
+[ext_resource type="Script" path="res://Scripts/Menu/Menu.cs" id="1_gwv30"]
+[ext_resource type="AnimationLibrary" uid="uid://bid5jimjy88il" path="res://Resourses/Animations/Blinking.res" id="2_7wvqs"]
+[ext_resource type="Texture2D" uid="uid://dogulm8iiaded" path="res://Resourses/Backgrounds/Art4.jpg" id="3_mwg7j"]
+[ext_resource type="Texture2D" uid="uid://qu7crmb700wx" path="res://Resourses/Backgrounds/Profiles.jpg" id="3_ppefd"]
+[ext_resource type="Shader" path="res://Resourses/Shaders/Menu.gdshader" id="4_1jyxo"]
+[ext_resource type="Shader" path="res://Resourses/Shaders/TV_Effect.gdshader" id="4_c0ghv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rhfjq"]
+shader = ExtResource("4_1jyxo")
+shader_parameter/value = 2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rk2ts"]
+shader = ExtResource("4_c0ghv")
+shader_parameter/fisheye_strength = 1.025
+
+[node name="Menu" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwv30")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -146.0
+offset_right = 3190.0
+offset_bottom = 2463.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("3_mwg7j")
+
+[node name="BlurEffect" type="ColorRect" parent="Background"]
+z_index = 8
+material = SubResource("ShaderMaterial_rhfjq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TV_Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 151.0
+offset_top = 85.0
+offset_right = 343.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("3_ppefd")
+
+[node name="TV_Effect" type="ColorRect" parent="TV_Background"]
+z_index = 9
+material = SubResource("ShaderMaterial_rk2ts")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackoutEffect" type="ColorRect" parent="."]
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BlinkOff" type="AnimationPlayer" parent="BlackoutEffect"]
+libraries = {
+"Blinking": ExtResource("2_7wvqs")
+}

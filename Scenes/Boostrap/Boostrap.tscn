@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://cwpbxp20dbw1e"]
+
+[ext_resource type="Texture2D" uid="uid://bsdu12av4cx88" path="res://Resourses/Backgrounds/Art8_Gray.png" id="1_7icuj"]
+[ext_resource type="Script" path="res://Scripts/Boostrap/Boostrap.cs" id="1_nogke"]
+[ext_resource type="Texture2D" uid="uid://oaq0ansswurr" path="res://Resourses/Effects/EdgeGradientBlackout.png" id="2_wocgg"]
+[ext_resource type="Texture2D" uid="uid://csydfqhi6u0lx" path="res://Resourses/Both/spinner_main.png" id="4_1rey8"]
+[ext_resource type="Script" path="res://Scripts/Both/LoaderRotation.cs" id="5_c1hm8"]
+[ext_resource type="AnimationLibrary" uid="uid://bid5jimjy88il" path="res://Resourses/Animations/Blinking.res" id="6_n1qdj"]
+
+[sub_resource type="Animation" id="Animation_ynuya"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qiv2j"]
+_data = {
+"RESET": SubResource("Animation_ynuya")
+}
+
+[node name="Control" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_nogke")
+metadata/TargetFPS = 0
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_right = 301.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.855, 0.855)
+texture = ExtResource("1_7icuj")
+
+[node name="Blinking" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -61.0
+offset_right = 678.0
+offset_bottom = 371.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_wocgg")
+stretch_mode = 3
+
+[node name="LoadingCircle" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.34902)
+z_index = 2
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_top = -185.0
+offset_right = 71.0
+offset_bottom = 71.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(130, 130)
+texture = ExtResource("4_1rey8")
+script = ExtResource("5_c1hm8")
+metadata/Speed = 175
+
+[node name="Blackout" type="ColorRect" parent="."]
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BlinkingAnimator" type="AnimationPlayer" parent="Blackout"]
+libraries = {
+"": SubResource("AnimationLibrary_qiv2j"),
+"Blinking": ExtResource("6_n1qdj")
+}
