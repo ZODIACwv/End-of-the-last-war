@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bsdu12av4cx88" path="res://Resourses/Backgrounds/Art8_Gray.png" id="1_7icuj"]
 [ext_resource type="Script" path="res://Scripts/Boostrap/Boostrap.cs" id="1_nogke"]
 [ext_resource type="Texture2D" uid="uid://oaq0ansswurr" path="res://Resourses/Effects/EdgeGradientBlackout.png" id="2_wocgg"]
-[ext_resource type="Texture2D" uid="uid://csydfqhi6u0lx" path="res://Resourses/Both/spinner_main.png" id="4_1rey8"]
+[ext_resource type="Texture2D" uid="uid://csydfqhi6u0lx" path="res://Resourses/Both/CircleLoader.png" id="4_1rey8"]
 [ext_resource type="Script" path="res://Scripts/Both/LoaderRotation.cs" id="5_c1hm8"]
 [ext_resource type="AnimationLibrary" uid="uid://bid5jimjy88il" path="res://Resourses/Animations/Blinking.res" id="6_n1qdj"]
 
