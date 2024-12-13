@@ -5,9 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://br8bmvyur3r5o" path="res://Resourses/Backgrounds/Art7.jpg" id="2_yes6w"]
 [ext_resource type="Shader" path="res://Resourses/Shaders/Menu.gdshader" id="4_1jyxo"]
 [ext_resource type="Shader" path="res://Resourses/Shaders/TV_Effect.gdshader" id="4_c0ghv"]
-[ext_resource type="Texture2D" uid="uid://l2s14fsrwsd2" path="res://Resourses/Menus/MainMenu/TV_Background.png" id="4_i2ou8"]
-[ext_resource type="Texture2D" uid="uid://b5qjxncu147gd" path="res://Resourses/Menus/MainMenu/Buttons.png" id="5_x6hk4"]
-[ext_resource type="Texture2D" uid="uid://o1rdq8wh8wvp" path="res://Resourses/Menus/MainMenu/TV.png" id="6_nvb4g"]
+[ext_resource type="Texture2D" uid="uid://bniekamv6pw7s" path="res://Resourses/Menus/MainMenu/TV_Background.png" id="4_i2ou8"]
+[ext_resource type="Texture2D" uid="uid://diw27ycix3pxc" path="res://Resourses/Menus/MainMenu/Buttons.png" id="5_x6hk4"]
+[ext_resource type="Texture2D" uid="uid://cdh1vvyxit54h" path="res://Resourses/Menus/MainMenu/TV.png" id="6_nvb4g"]
+[ext_resource type="Script" path="res://Scripts/Menu/MainMenuButtons.cs" id="9_afer7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rhfjq"]
 shader = ExtResource("4_1jyxo")
@@ -16,10 +17,6 @@ shader_parameter/value = 2.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rk2ts"]
 shader = ExtResource("4_c0ghv")
 shader_parameter/fisheye_strength = 1.025
-
-[sub_resource type="GDScript" id="GDScript_ieh4x"]
-script/source = "extends Button
-"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -96,15 +93,19 @@ offset_right = -280.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="TV_Effect"]
-light_mask = 8
-visibility_layer = 8
-layout_mode = 0
-offset_left = 78.0
-offset_top = 120.0
-offset_right = 397.0
-offset_bottom = 206.0
-script = SubResource("GDScript_ieh4x")
+[node name="ContinueText" type="RichTextLabel" parent="TV_Effect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 89.0
+offset_top = 127.0
+offset_right = -396.0
+offset_bottom = -406.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continue"
+scroll_active = false
 
 [node name="TV" type="TextureRect" parent="."]
 z_index = 19
@@ -137,3 +138,22 @@ color = Color(0, 0, 0, 1)
 libraries = {
 "Blinking": ExtResource("2_7wvqs")
 }
+
+[node name="MainMenuButtons" type="Node" parent="."]
+
+[node name="ContinueButton" type="Button" parent="MainMenuButtons"]
+modulate = Color(1, 1, 1, 0)
+light_mask = 8
+visibility_layer = 8
+z_index = 11
+anchors_preset = -1
+anchor_left = 0.146
+anchor_top = 0.252
+anchor_right = 0.411
+anchor_bottom = 0.373
+offset_left = -0.192017
+offset_top = -0.296005
+offset_right = -0.472015
+offset_bottom = 0.29599
+text = "button"
+script = ExtResource("9_afer7")

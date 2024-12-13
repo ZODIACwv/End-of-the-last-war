@@ -16,6 +16,11 @@ config/features=PackedStringArray("4.3", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 
+[autoload]
+
+acGlobalPool="*res://addons/anti-cheating/ac_node.gd"
+LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
+
 [display]
 
 window/stretch/mode="viewport"
@@ -23,6 +28,10 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="EOTLW"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/anti-cheating/plugin.cfg", "res://addons/godot_visualstudio_debugger/plugin.cfg", "res://addons/localization_editor/plugin.cfg")
 
 [file_customization]
 
@@ -32,7 +41,9 @@ folder_colors={
 "res://Scripts/": "red",
 "res://Scripts/Both/": "red",
 "res://Sounds/": "orange",
-"res://android/": "gray"
+"res://addons/": "gray",
+"res://android/": "gray",
+"res://localization/": "pink"
 }
 
 [rendering]
