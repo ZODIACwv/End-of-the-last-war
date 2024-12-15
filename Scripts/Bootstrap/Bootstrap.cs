@@ -1,11 +1,14 @@
 using Godot;
 
-public partial class Boostrap : Control
+public partial class Bootstrap : Control
 {
+	[Export]
+	int targetFps;
 	AnimationPlayer animationPlayer;
+
 	public override void _Ready()
 	{
-		Engine.MaxFps = (int)GetMeta("TargetFPS");
+		Engine.MaxFps = targetFps;
 
 		animationPlayer = FindChild("BlinkingAnimator") as AnimationPlayer;
 		animationPlayer.Play("Blinking/BlinkingIntro");

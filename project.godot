@@ -11,10 +11,12 @@ config_version=5
 [application]
 
 config/name="EOTLW"
-run/main_scene="res://Scenes/Boostrap/Boostrap.tscn"
+config/version="0.008"
+run/main_scene="res://Scenes/Bootstrap/Bootstrap.tscn"
 config/features=PackedStringArray("4.3", "C#", "GL Compatibility")
-boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/show_image=false
+boot_splash/bg_color=Color(0.00291003, 0.138011, 0.648242, 1)
+boot_splash/image="res://Resourses/Root/Avatar.png"
+config/icon="res://Resourses/Root/Avatar.png"
 
 [autoload]
 
@@ -23,7 +25,11 @@ LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
 
 [display]
 
+window/size/viewport_width=1000
+window/size/viewport_height=500
+window/size/transparent=true
 window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [dotnet]
 
@@ -36,6 +42,7 @@ enabled=PackedStringArray("res://addons/anti-cheating/plugin.cfg", "res://addons
 [file_customization]
 
 folder_colors={
+"res://Properties/": "gray",
 "res://Resourses/": "teal",
 "res://Scenes/": "purple",
 "res://Scripts/": "red",
@@ -45,6 +52,12 @@ folder_colors={
 "res://android/": "gray",
 "res://localization/": "pink"
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/android/enable_long_press_as_right_click=true
+pointing/android/enable_pan_and_scale_gestures=true
 
 [rendering]
 

@@ -123,7 +123,6 @@ scale = Vector2(0.37, 0.37)
 texture = ExtResource("6_nvb4g")
 
 [node name="BlackoutEffect" type="ColorRect" parent="."]
-visible = false
 z_index = 20
 layout_mode = 1
 anchors_preset = 15
