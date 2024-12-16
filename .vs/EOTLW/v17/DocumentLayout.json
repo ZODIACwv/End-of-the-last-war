@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Projects\\Godot\\eotlw\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\eotlw\\scripts\\bootstrap\\bootstrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:scripts\\bootstrap\\bootstrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\eotlw\\scripts\\menu\\mainmenubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:scripts\\menu\\mainmenubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\eotlw\\scripts\\game\\player\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:scripts\\game\\player\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Bootstrap.cs",
-              "DocumentMoniker": "C:\\Projects\\Godot\\eotlw\\Scripts\\Bootstrap\\Bootstrap.cs",
-              "RelativeDocumentMoniker": "Scripts\\Bootstrap\\Bootstrap.cs",
-              "ToolTip": "C:\\Projects\\Godot\\eotlw\\Scripts\\Bootstrap\\Bootstrap.cs",
-              "RelativeToolTip": "Scripts\\Bootstrap\\Bootstrap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "Transform.cs",
+              "DocumentMoniker": "C:\\Projects\\Godot\\eotlw\\Scripts\\Game\\Player\\Transform.cs",
+              "RelativeDocumentMoniker": "Scripts\\Game\\Player\\Transform.cs",
+              "ToolTip": "C:\\Projects\\Godot\\eotlw\\Scripts\\Game\\Player\\Transform.cs",
+              "RelativeToolTip": "Scripts\\Game\\Player\\Transform.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T20:16:29.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainMenuButtons.cs",
-              "DocumentMoniker": "C:\\Projects\\Godot\\eotlw\\Scripts\\Menu\\MainMenuButtons.cs",
-              "RelativeDocumentMoniker": "Scripts\\Menu\\MainMenuButtons.cs",
-              "ToolTip": "C:\\Projects\\Godot\\eotlw\\Scripts\\Menu\\MainMenuButtons.cs",
-              "RelativeToolTip": "Scripts\\Menu\\MainMenuButtons.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T19:24:25.066Z",
+              "WhenOpened": "2024-12-16T18:52:42.893Z",
               "EditorCaption": ""
             }
           ]

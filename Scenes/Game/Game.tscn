@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://da266jon6v5u0"]
+[gd_scene load_steps=3 format=3 uid="uid://da266jon6v5u0"]
+
+[ext_resource type="PackedScene" uid="uid://biyhqhpp7ayps" path="res://Scenes/Game/GUI.tscn" id="1_vyhuj"]
+[ext_resource type="PackedScene" uid="uid://5pm2u0nieu5q" path="res://Scenes/Game/Player.tscn" id="2_mrd8j"]
 
 [node name="Game" type="Node2D"]
+
+[node name="GUI" parent="." instance=ExtResource("1_vyhuj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Player" parent="." instance=ExtResource("2_mrd8j")]
+scale = Vector2(0.75, 0.75)
