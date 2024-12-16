@@ -1,0 +1,112 @@
+[gd_scene load_steps=17 format=3 uid="uid://bbqbopdyaknlx"]
+
+[ext_resource type="Script" path="res://addons/inventory-system-demos/mp/mp_demo.gd" id="1_fcmcx"]
+[ext_resource type="PackedScene" uid="uid://dnlxnu6jpej17" path="res://addons/inventory-system-demos/mp/mp_player.tscn" id="2_01e0j"]
+[ext_resource type="InventoryDatabase" uid="uid://de5qy8ycey7yn" path="res://addons/inventory-system-demos/database/database.tres" id="3_aep54"]
+[ext_resource type="PackedScene" uid="uid://bqnv3x0igblvs" path="res://addons/inventory-system-demos/fps/labels.tscn" id="5_rvlsk"]
+[ext_resource type="Resource" uid="uid://vm1ta374rw08" path="res://addons/inventory-system-demos/base/kenney_input_icons.tres" id="6_52d7a"]
+[ext_resource type="PackedScene" uid="uid://da2b73383isem" path="res://addons/inventory-system-demos/ui/inventory_system_ui.tscn" id="6_asmwx"]
+[ext_resource type="PackedScene" uid="uid://d2gketv1q2cph" path="res://addons/inventory-system-demos/fps/level.tscn" id="8_kfwho"]
+[ext_resource type="Script" path="res://addons/inventory-system-demos/mp/dropped_item_spawner.gd" id="8_m78qf"]
+[ext_resource type="PackedScene" uid="uid://cc6pmwc0w143c" path="res://addons/inventory-system-demos/mp/mp_box_inventory.tscn" id="9_y0513"]
+[ext_resource type="Script" path="res://addons/inventory-system-demos/mp/networked_box_inventory.gd" id="10_4488h"]
+[ext_resource type="Script" path="res://addons/inventory-system-demos/base/setup_keys.gd" id="10_efc1k"]
+[ext_resource type="Script" path="res://addons/inventory-system-demos/character/networked_openable.gd" id="10_kjp1o"]
+[ext_resource type="Script" path="res://addons/inventory-system-demos/mp/placeable_item_spawner.gd" id="12_tyg5k"]
+[ext_resource type="Script" path="res://addons/inventory-system-demos/mp/lag_test.gd" id="15_7tjb2"]
+[ext_resource type="PackedScene" uid="uid://b7kev3be161jq" path="res://addons/inventory-system-demos/mp/mp_workbench.tscn" id="16_qnjnu"]
+[ext_resource type="PackedScene" uid="uid://ccgrlrqx2vvqf" path="res://addons/inventory-system-demos/mp/mp_campfire.tscn" id="17_qo5oj"]
+
+[node name="MPDemo" type="Node"]
+script = ExtResource("1_fcmcx")
+player_scene = ExtResource("2_01e0j")
+database = ExtResource("3_aep54")
+
+[node name="Setup Keys" type="Node" parent="."]
+script = ExtResource("10_efc1k")
+
+[node name="Level" parent="." instance=ExtResource("8_kfwho")]
+
+[node name="Box Inventory" parent="." instance=ExtResource("9_y0513")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4)
+script = ExtResource("10_4488h")
+
+[node name="Inventory" parent="Box Inventory" index="0"]
+inventory_name = "Dynamic Inventory"
+
+[node name="Openable" parent="Box Inventory" index="7"]
+script = ExtResource("10_kjp1o")
+
+[node name="Box Inventory2" parent="." instance=ExtResource("9_y0513")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.65824, 0.5, -4)
+script = ExtResource("10_4488h")
+
+[node name="Inventory" parent="Box Inventory2" index="0"]
+inventory_name = "Static Inventory"
+
+[node name="Openable" parent="Box Inventory2" index="7"]
+script = ExtResource("10_kjp1o")
+
+[node name="Workbench" parent="." instance=ExtResource("16_qnjnu")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -3.75, 0, -4)
+
+[node name="Campfire" parent="." instance=ExtResource("17_qo5oj")]
+burnable_category = "burnables"
+
+[node name="DroppedItemSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("..")
+script = ExtResource("8_m78qf")
+database = ExtResource("3_aep54")
+
+[node name="PlaceableItemSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("..")
+script = ExtResource("12_tyg5k")
+
+[node name="LagTest" type="Node" parent="."]
+script = ExtResource("15_7tjb2")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Labels" parent="UI" instance=ExtResource("5_rvlsk")]
+
+[node name="Inventory System UI" parent="UI" instance=ExtResource("6_asmwx")]
+
+[node name="InteractorUI" parent="UI/Inventory System UI" index="0"]
+input_icons = ExtResource("6_52d7a")
+
+[node name="Connect Panel" type="ColorRect" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.490196, 0.388235, 0.34902, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Connect Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HostButton" type="Button" parent="UI/Connect Panel/VBoxContainer"]
+layout_mode = 2
+text = "HOST"
+
+[node name="ConnectButton" type="Button" parent="UI/Connect Panel/VBoxContainer"]
+layout_mode = 2
+text = "CONNECT TO LOCALHOST"
+
+[connection signal="button_down" from="UI/Connect Panel/VBoxContainer/HostButton" to="." method="_on_host_button_button_down"]
+[connection signal="button_down" from="UI/Connect Panel/VBoxContainer/ConnectButton" to="." method="_on_connect_button_button_down"]
+
+[editable path="Box Inventory"]
+[editable path="Box Inventory2"]
+[editable path="UI/Inventory System UI"]

@@ -18,11 +18,6 @@ boot_splash/bg_color=Color(0.00291003, 0.138011, 0.648242, 1)
 boot_splash/image="res://Resourses/Root/Avatar.png"
 config/icon="res://Resourses/Root/Avatar.png"
 
-[autoload]
-
-acGlobalPool="*res://addons/anti-cheating/ac_node.gd"
-LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
-
 [display]
 
 window/size/viewport_width=1000
@@ -37,7 +32,7 @@ project/assembly_name="EOTLW"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/anti-cheating/plugin.cfg", "res://addons/godot_visualstudio_debugger/plugin.cfg", "res://addons/localization_editor/plugin.cfg")
+enabled=PackedStringArray("res://addons/anti-cheating/plugin.cfg", "res://addons/cameraregion2d/plugin.cfg", "res://addons/godot_visualstudio_debugger/plugin.cfg", "res://addons/inventory-system/plugin.cfg", "res://addons/localization_editor/plugin.cfg", "res://addons/script_panel_plus/plugin.cfg")
 
 [file_customization]
 
@@ -50,6 +45,7 @@ folder_colors={
 "res://Sounds/": "orange",
 "res://addons/": "gray",
 "res://android/": "gray",
+"res://godotgif/": "gray",
 "res://localization/": "pink"
 }
 
