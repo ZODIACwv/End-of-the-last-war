@@ -29,7 +29,7 @@ window/size/viewport_width=1000
 window/size/viewport_height=500
 window/size/transparent=true
 window/stretch/mode="viewport"
-window/stretch/aspect="ignore"
+window/stretch/aspect="expand"
 
 [dotnet]
 

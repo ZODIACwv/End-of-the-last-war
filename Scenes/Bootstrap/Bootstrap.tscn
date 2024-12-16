@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bsdu12av4cx88" path="res://Resourses/Backgrounds/Art8_Gray.png" id="1_7icuj"]
 [ext_resource type="Script" path="res://Scripts/Bootstrap/Bootstrap.cs" id="1_nogke"]
 [ext_resource type="Texture2D" uid="uid://oaq0ansswurr" path="res://Resourses/Effects/EdgeGradientBlackout.png" id="2_wocgg"]
-[ext_resource type="Texture2D" uid="uid://csydfqhi6u0lx" path="res://Resourses/Both/CircleLoader.png" id="4_1rey8"]
+[ext_resource type="Texture2D" uid="uid://d4k2mkp5nbt5b" path="res://Resourses/Both/CircleLoaderAtlas.tres" id="4_3aa0g"]
 [ext_resource type="Script" path="res://Scripts/Both/LoaderRotation.cs" id="5_c1hm8"]
 [ext_resource type="AnimationLibrary" uid="uid://bid5jimjy88il" path="res://Resourses/Animations/Blinking.res" id="6_n1qdj"]
 
@@ -42,51 +42,54 @@ targetFps = 30
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_right = 515.0
+offset_left = -500.0
+offset_right = 1015.0
 offset_bottom = 258.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.66, 0.66)
 texture = ExtResource("1_7icuj")
 expand_mode = 5
+stretch_mode = 3
 
-[node name="Blinking" type="TextureRect" parent="."]
+[node name="Blinking" type="TextureRect" parent="Background"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -38.45
-offset_top = -17.445
-offset_right = 881.55
-offset_bottom = 562.555
+offset_left = -430.303
+offset_top = -201.515
+offset_right = 958.697
+offset_bottom = 673.485
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.557, 0.496)
+scale = Vector2(0.807, 0.717)
 texture = ExtResource("2_wocgg")
 stretch_mode = 3
 
-[node name="LoadingCircle" type="TextureRect" parent="."]
+[node name="LoadingCircle" type="TextureRect" parent="Background/Blinking"]
 modulate = Color(1, 1, 1, 0.34902)
 z_index = 2
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -185.0
-offset_top = -185.0
-offset_right = 71.0
-offset_bottom = 71.0
+anchors_preset = -1
+anchor_left = 0.759
+anchor_top = 0.706
+anchor_right = 0.796
+anchor_bottom = 0.772
+offset_left = -486.136
+offset_top = -484.898
+offset_right = 484.416
+offset_bottom = 485.324
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(0.2, 0.2)
-pivot_offset = Vector2(130, 130)
-texture = ExtResource("4_1rey8")
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(539, 539)
+texture = ExtResource("4_3aa0g")
 script = ExtResource("5_c1hm8")
 metadata/Speed = 175
 

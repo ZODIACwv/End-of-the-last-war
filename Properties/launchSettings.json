@@ -8,10 +8,10 @@
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	},
-	"Godot Debug Control": {
+	"Godot Debug Game": {
 	  "commandName": "Executable",
 	  "executablePath": "C:/Users/ZODIAC/Downloads/Godot_v4.3-stable_mono_win64/Godot_v4.3-stable_mono_win64.exe",
-	  "commandLineArgs": "--upwards ./Scenes/Bootstrap/Bootstrap.tscn --verbose",
+	  "commandLineArgs": "--upwards ./Scenes/Game/Game.tscn --verbose",
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	}

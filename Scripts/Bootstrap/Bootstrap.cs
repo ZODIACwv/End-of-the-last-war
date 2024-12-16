@@ -18,12 +18,12 @@ public partial class Bootstrap : Control
 	private void OnIntroFinished(StringName animName)
 	{
 		animationPlayer.AnimationFinished -= OnIntroFinished;
-		animationPlayer.Play("Blinking/BlinkOn");
+		/*animationPlayer.Play("Blinking/BlinkOn");
 		animationPlayer.AnimationFinished += (StringName animName) =>
 		{
 			// Loading scene here:
 			var menuScene = GD.Load<PackedScene>("res://Scenes/Menu/Menu.tscn");
 			GetTree().ChangeSceneToPacked(menuScene);
-		};
+		};*/
 	}
 }
