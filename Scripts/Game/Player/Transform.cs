@@ -20,13 +20,8 @@ public partial class Transform : Node2D
 
 	public override void _UnhandledInput(InputEvent @event)
 	{
-		if (@event is InputEventMouseButton)
-		{
-			InputEventMouseButton mouseEvent= @event as InputEventMouseButton;
-			if (mouseEvent.ButtonIndex == MouseButton.Left && mouseEvent.Pressed == true)
-			{
-				pointer.SetGlobalPosition(mouseEvent.GetPosition());
-			}
-		}
+		// Проверяем, является ли событие кликом мыши
+		if (@event is InputEventMouseButton mouseButtonEvent && mouseButtonEvent.IsPressed())
+			pointer.Position = GetGlobalMousePosition();
 	}
 }

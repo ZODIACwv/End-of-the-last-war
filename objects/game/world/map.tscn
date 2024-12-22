@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://komihad8xbd5"]
+
+[ext_resource type="Texture2D" uid="uid://0cfvmw1r2trk" path="res://sprites/world/tiles/tiles.png" id="1_jvbpn"]
+[ext_resource type="Script" path="res://core/world/Map.cs" id="1_x108l"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ownmw"]
+texture = ExtResource("1_jvbpn")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+0:8/0 = 0
+0:9/0 = 0
+0:10/0 = 0
+0:11/0 = 0
+0:12/0 = 0
+0:13/0 = 0
+0:14/0 = 0
+0:15/0 = 0
+0:16/0 = 0
+0:17/0 = 0
+0:18/0 = 0
+0:19/0 = 0
+0:20/0 = 0
+0:21/0 = 0
+0:22/0 = 0
+0:23/0 = 0
+0:24/0 = 0
+0:25/0 = 0
+0:26/0 = 0
+0:27/0 = 0
+0:28/0 = 0
+0:29/0 = 0
+0:30/0 = 0
+0:31/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_obmge"]
+tile_size = Vector2i(64, 64)
+custom_data_layer_0/name = "ClassName"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetAtlasSource_ownmw")
+
+[node name="Map" type="TileMapLayer"]
+tile_set = SubResource("TileSet_obmge")
+script = ExtResource("1_x108l")

@@ -1,0 +1,289 @@
+[{
+	"name": "tiles/forest/0.png",
+	"x": 0,
+	"y": 0,
+	"color": "1cffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/1.png",
+	"x": 0,
+	"y": 1,
+	"color": "caffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/10.png",
+	"x": 0,
+	"y": 2,
+	"color": "c8ffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/11.png",
+	"x": 0,
+	"y": 3,
+	"color": "c9ffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/12.png",
+	"x": 0,
+	"y": 4,
+	"color": "cbffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/13.png",
+	"x": 0,
+	"y": 5,
+	"color": "c7ceff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/14.png",
+	"x": 0,
+	"y": 6,
+	"color": "bac8ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/15.png",
+	"x": 0,
+	"y": 7,
+	"color": "bacbff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/16.png",
+	"x": 0,
+	"y": 8,
+	"color": "c4ceff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/17.png",
+	"x": 0,
+	"y": 9,
+	"color": "c5ceff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/18.png",
+	"x": 0,
+	"y": 10,
+	"color": "c5c8ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/19.png",
+	"x": 0,
+	"y": 11,
+	"color": "bac7ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/2.png",
+	"x": 0,
+	"y": 12,
+	"color": "c6ffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/20.png",
+	"x": 0,
+	"y": 13,
+	"color": "c4ffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/21.png",
+	"x": 0,
+	"y": 14,
+	"color": "c5ffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/22.png",
+	"x": 0,
+	"y": 15,
+	"color": "c7ffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/23.png",
+	"x": 0,
+	"y": 16,
+	"color": "c6c2ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/24.png",
+	"x": 0,
+	"y": 17,
+	"color": "baffff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/25.png",
+	"x": 0,
+	"y": 18,
+	"color": "c7c3ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/26.png",
+	"x": 0,
+	"y": 19,
+	"color": "bac4ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/27.png",
+	"x": 0,
+	"y": 20,
+	"color": "c5cbff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/28.png",
+	"x": 0,
+	"y": 21,
+	"color": "c7c7ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/29.png",
+	"x": 0,
+	"y": 22,
+	"color": "c6c7ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/3.png",
+	"x": 0,
+	"y": 23,
+	"color": "c7c4ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/30.png",
+	"x": 0,
+	"y": 24,
+	"color": "bac2ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/31.png",
+	"x": 0,
+	"y": 25,
+	"color": "c7c2ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/4.png",
+	"x": 0,
+	"y": 26,
+	"color": "c5c7ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/5.png",
+	"x": 0,
+	"y": 27,
+	"color": "c5c4ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/6.png",
+	"x": 0,
+	"y": 28,
+	"color": "c6c8ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/7.png",
+	"x": 0,
+	"y": 29,
+	"color": "bac3ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/8.png",
+	"x": 0,
+	"y": 30,
+	"color": "c5c2ff",
+	"className": "forest"
+}, {
+	"name": "tiles/forest/9.png",
+	"x": 0,
+	"y": 31,
+	"color": "c4c8ff",
+	"className": "forest"
+}, {
+	"name": "tiles/water/0.png",
+	"x": 1,
+	"y": 0,
+	"color": "c4cbff",
+	"className": "water"
+}, {
+	"name": "tiles/water/1.png",
+	"x": 2,
+	"y": 0,
+	"color": "baceff",
+	"className": "water"
+}, {
+	"name": "tiles/water/10.png",
+	"x": 3,
+	"y": 0,
+	"color": "c6ceff",
+	"className": "water"
+}, {
+	"name": "tiles/water/11.png",
+	"x": 4,
+	"y": 0,
+	"color": "c4cbff",
+	"className": "water"
+}, {
+	"name": "tiles/water/12.png",
+	"x": 5,
+	"y": 0,
+	"color": "baceff",
+	"className": "water"
+}, {
+	"name": "tiles/water/13.png",
+	"x": 6,
+	"y": 0,
+	"color": "c4cbff",
+	"className": "water"
+}, {
+	"name": "tiles/water/14.png",
+	"x": 7,
+	"y": 0,
+	"color": "c4cbff",
+	"className": "water"
+}, {
+	"name": "tiles/water/15.png",
+	"x": 8,
+	"y": 0,
+	"color": "c6cbff",
+	"className": "water"
+}, {
+	"name": "tiles/water/2.png",
+	"x": 9,
+	"y": 0,
+	"color": "c5c3ff",
+	"className": "water"
+}, {
+	"name": "tiles/water/3.png",
+	"x": 10,
+	"y": 0,
+	"color": "c4caff",
+	"className": "water"
+}, {
+	"name": "tiles/water/4.png",
+	"x": 11,
+	"y": 0,
+	"color": "bac6ff",
+	"className": "water"
+}, {
+	"name": "tiles/water/5.png",
+	"x": 12,
+	"y": 0,
+	"color": "",
+	"className": "water"
+}, {
+	"name": "tiles/water/6.png",
+	"x": 13,
+	"y": 0,
+	"color": "",
+	"className": "water"
+}, {
+	"name": "tiles/water/7.png",
+	"x": 14,
+	"y": 0,
+	"color": "",
+	"className": "water"
+}, {
+	"name": "tiles/water/8.png",
+	"x": 15,
+	"y": 0,
+	"color": "",
+	"className": "water"
+}, {
+	"name": "tiles/water/9.png",
+	"x": 16,
+	"y": 0,
+	"color": "",
+	"className": "water"
+}]

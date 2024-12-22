@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://da266jon6v5u0"]
+
+[ext_resource type="PackedScene" uid="uid://biyhqhpp7ayps" path="res://objects/game/screens/GUI.tscn" id="1_vyhuj"]
+[ext_resource type="PackedScene" uid="uid://5pm2u0nieu5q" path="res://objects/game/world/player.tscn" id="2_mrd8j"]
+[ext_resource type="Texture2D" uid="uid://qfgtohen2q4l" path="res://sprites/world/icons/Pointer.png" id="3_ukk1x"]
+[ext_resource type="Script" path="res://scripts/Game/Player/Pointer.cs" id="4_wekda"]
+[ext_resource type="Texture2D" uid="uid://dr1bbrb1d0bto" path="res://sprites/world/icons/PointerHighlighted.png" id="5_ikxdh"]
+[ext_resource type="Script" path="res://scripts/Game/Player/MapCamera2D.gd" id="5_sfl6h"]
+
+[node name="Game" type="Node2D"]
+
+[node name="GUI" parent="." instance=ExtResource("1_vyhuj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Pointer" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(235, 0)
+texture = ExtResource("3_ukk1x")
+offset = Vector2(0, -38)
+region_rect = Rect2(589, 773, 1441, 1408)
+script = ExtResource("4_wekda")
+
+[node name="Player" parent="." node_paths=PackedStringArray("pointer") instance=ExtResource("2_mrd8j")]
+scale = Vector2(0.75, 0.75)
+pointer = NodePath("../Pointer")
+
+[node name="CenterMark" type="Sprite2D" parent="."]
+z_index = 3
+texture = ExtResource("5_ikxdh")
+offset = Vector2(0, -38)
+
+[node name="Camera" type="Camera2D" parent="."]
+script = ExtResource("5_sfl6h")
+zoom_max = 2.0
+pan_margin = 0.0
+pan_keyboard = false
+drag_inertia = 0.0
