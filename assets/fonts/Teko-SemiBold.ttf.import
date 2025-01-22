@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c7s1omn07yi38"
-path="res://.godot/imported/Teko-SemiBold.ttf-59ecc8c293bf8254e9682c1ca656dd95.fontdata"
+path="res://.godot/imported/teko-SemiBold.ttf-ed7ce05ef8b881c4ff9cddd887f11ddd.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Teko-SemiBold.ttf"
-dest_files=["res://.godot/imported/Teko-SemiBold.ttf-59ecc8c293bf8254e9682c1ca656dd95.fontdata"]
+source_file="res://assets/fonts/teko-SemiBold.ttf"
+dest_files=["res://.godot/imported/teko-SemiBold.ttf-ed7ce05ef8b881c4ff9cddd887f11ddd.fontdata"]
 
 [params]
 

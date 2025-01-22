@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4muwjdiytil0"]
 
-[ext_resource type="Script" path="res://core/screens/GameScreen.cs" id="1_ma830"]
-[ext_resource type="PackedScene" uid="uid://komihad8xbd5" path="res://objects/world/map.tscn" id="2_k3auy"]
-[ext_resource type="Script" path="res://core/ui/Camera2.cs" id="3_26g6q"]
+[ext_resource type="Script" path="res://core/screens/gameScreen.cs" id="1_ma830"]
+[ext_resource type="PackedScene" uid="uid://komihad8xbd5" path="res://objects/game/world/map.tscn" id="2_k3auy"]
+[ext_resource type="Script" path="res://core/ui/camera2.cs" id="3_26g6q"]
 
 [node name="GameScreen" type="Node2D"]
 script = ExtResource("1_ma830")

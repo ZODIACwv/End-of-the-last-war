@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://che1yn3bixehs"
-path="res://.godot/imported/ButtonsClicked.png-f5606494a1a58206e606142c39ce06e6.ctex"
+uid="uid://yfl2fvmoo2oy"
+path="res://.godot/imported/newGameBG.jpg-74236d8d5987136db6feb9802fe0463c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/Interface/ButtonsClicked.png"
-dest_files=["res://.godot/imported/ButtonsClicked.png-f5606494a1a58206e606142c39ce06e6.ctex"]
+source_file="res://sprites/backgrounds/newGameBG.jpg"
+dest_files=["res://.godot/imported/newGameBG.jpg-74236d8d5987136db6feb9802fe0463c.ctex"]
 
 [params]
 

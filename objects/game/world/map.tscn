@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://komihad8xbd5"]
 
 [ext_resource type="Texture2D" uid="uid://0cfvmw1r2trk" path="res://sprites/world/tiles/tiles.png" id="1_jvbpn"]
-[ext_resource type="Script" path="res://core/world/Map.cs" id="1_x108l"]
+[ext_resource type="Script" path="res://core/world/map.cs" id="1_x108l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ownmw"]
 texture = ExtResource("1_jvbpn")

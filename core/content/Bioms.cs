@@ -1,7 +1,7 @@
 public class Bioms {
 	private static MultiKeyDictionary<string, Biom> bioms;
 
-	private static Biom biom;
+	//private static Biom biom;
 	public void Load() {
 		bioms = new MultiKeyDictionary<string, Biom>();
 		NewBiom(

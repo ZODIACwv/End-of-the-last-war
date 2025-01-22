@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bvayobedahic"
-path="res://.godot/imported/Teko-VariableFont_wght.ttf-f9ba61bede62b6a487e84634ea9065b4.fontdata"
+path="res://.godot/imported/teko-VariableFont_wght.ttf-a743d0980f3efaee8aafc57e086a3e23.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Teko-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/Teko-VariableFont_wght.ttf-f9ba61bede62b6a487e84634ea9065b4.fontdata"]
+source_file="res://assets/fonts/teko-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/teko-VariableFont_wght.ttf-a743d0980f3efaee8aafc57e086a3e23.fontdata"]
 
 [params]
 

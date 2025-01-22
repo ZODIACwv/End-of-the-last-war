@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="EOTLW"
+config/name="End of the last war"
 config/version="0.008"
-run/main_scene="res://scenes/game/game.tscn"
+run/main_scene="res://objects/game/game.tscn"
 config/features=PackedStringArray("4.3", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0.00572708, 0.200915, 0.877436, 1)
-boot_splash/image="res://Resourses/Root/Avatar.png"
-config/icon="res://Resourses/Root/Avatar.png"
+boot_splash/image="res://assets/root/avatar.png"
+config/icon="res://assets/root/avatar.png"
 
 [display]
 
@@ -32,11 +32,12 @@ project/assembly_name="EOTLW"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_visualstudio_debugger/plugin.cfg")
+enabled=PackedStringArray("res://addons/SpritesheetGenerator/plugin.cfg", "res://addons/godot_visualstudio_debugger/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
+"res://Properties/": "gray",
 "res://Resourses/": "teal",
 "res://addons/": "gray",
 "res://assets/": "green",
@@ -46,7 +47,7 @@ folder_colors={
 "res://objects/": "blue",
 "res://scenes/": "purple",
 "res://scripts/": "red",
-"res://scripts/Both/": "red",
+"res://scripts/both/": "red",
 "res://sprites/": "yellow"
 }
 

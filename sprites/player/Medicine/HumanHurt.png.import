@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnmtif20oq7mm"
-path="res://.godot/imported/HumanHurt.png-28eecc7d9116f61a0e2815bd8238ba1d.ctex"
+path="res://.godot/imported/humanHurt.png-f36b3df8ea19ac84d5f6ec9e058fff3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/Medicine/HumanHurt.png"
-dest_files=["res://.godot/imported/HumanHurt.png-28eecc7d9116f61a0e2815bd8238ba1d.ctex"]
+source_file="res://sprites/player/medicine/humanHurt.png"
+dest_files=["res://.godot/imported/humanHurt.png-f36b3df8ea19ac84d5f6ec9e058fff3d.ctex"]
 
 [params]
 

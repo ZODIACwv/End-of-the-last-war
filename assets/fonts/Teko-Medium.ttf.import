@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bykjo5jyj3p1l"
-path="res://.godot/imported/Teko-Medium.ttf-5a1d439ebc118a002f06584632a271e5.fontdata"
+path="res://.godot/imported/teko-Medium.ttf-9f2d742fb0bf5cfbbb0d5aa3b44dc89a.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Teko-Medium.ttf"
-dest_files=["res://.godot/imported/Teko-Medium.ttf-5a1d439ebc118a002f06584632a271e5.fontdata"]
+source_file="res://assets/fonts/teko-Medium.ttf"
+dest_files=["res://.godot/imported/teko-Medium.ttf-9f2d742fb0bf5cfbbb0d5aa3b44dc89a.fontdata"]
 
 [params]
 

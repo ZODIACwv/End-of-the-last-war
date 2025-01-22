@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b6muip7rjuh02"
-path="res://.godot/imported/Stalker_Dead_Air_-_Menu_68481095.mp3-02dd12b82a717c9f7cb9c7535812b104.mp3str"
+path="res://.godot/imported/stalker_Dead_Air_-_Menu_68481095.mp3-5a7c16f5dc0c1e77329622de2f9ca6a5.mp3str"
 
 [deps]
 
-source_file="res://assets/music/Stalker_Dead_Air_-_Menu_68481095.mp3"
-dest_files=["res://.godot/imported/Stalker_Dead_Air_-_Menu_68481095.mp3-02dd12b82a717c9f7cb9c7535812b104.mp3str"]
+source_file="res://assets/music/stalker_Dead_Air_-_Menu_68481095.mp3"
+dest_files=["res://.godot/imported/stalker_Dead_Air_-_Menu_68481095.mp3-5a7c16f5dc0c1e77329622de2f9ca6a5.mp3str"]
 
 [params]
 

@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://biyhqhpp7ayps" path="res://objects/game/screens/GUI.tscn" id="1_vyhuj"]
 [ext_resource type="PackedScene" uid="uid://5pm2u0nieu5q" path="res://objects/game/world/player.tscn" id="2_mrd8j"]
-[ext_resource type="Texture2D" uid="uid://qfgtohen2q4l" path="res://sprites/world/icons/Pointer.png" id="3_ukk1x"]
-[ext_resource type="Script" path="res://scripts/Game/Player/Pointer.cs" id="4_wekda"]
-[ext_resource type="Texture2D" uid="uid://dr1bbrb1d0bto" path="res://sprites/world/icons/PointerHighlighted.png" id="5_ikxdh"]
-[ext_resource type="Script" path="res://scripts/Game/Player/MapCamera2D.gd" id="5_sfl6h"]
+[ext_resource type="Texture2D" uid="uid://qfgtohen2q4l" path="res://sprites/world/icons/pointer.png" id="3_ukk1x"]
+[ext_resource type="Script" path="res://scripts/game/player/Pointer.cs" id="4_wekda"]
+[ext_resource type="Texture2D" uid="uid://dr1bbrb1d0bto" path="res://sprites/world/icons/pointerHighlighted.png" id="5_ikxdh"]
+[ext_resource type="Script" path="res://scripts/game/player/MapCamera2D.gd" id="5_sfl6h"]
 
 [node name="Game" type="Node2D"]
 

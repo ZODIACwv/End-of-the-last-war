@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uggl66wenpao"
-path="res://.godot/imported/TV_Saves.png-de1e3006ebaa28e21db2aa907e693eb7.ctex"
+path="res://.godot/imported/TV_Saves.png-d17a0cf273cad1eb28e5338a282ac263.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/menus/MainMenu/TV_Saves.png"
-dest_files=["res://.godot/imported/TV_Saves.png-de1e3006ebaa28e21db2aa907e693eb7.ctex"]
+source_file="res://sprites/menus/mainMenu/TV_Saves.png"
+dest_files=["res://.godot/imported/TV_Saves.png-d17a0cf273cad1eb28e5338a282ac263.ctex"]
 
 [params]
 

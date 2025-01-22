@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp5kctde2n74n"
-path="res://.godot/imported/Buttons.png-21f5191bd5a626f471536828ad74f10f.ctex"
+uid="uid://bnkl8rujlgv0h"
+path="res://.godot/imported/Checker.png-95b82ca4c05ab143e1e16c56d598421b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/Interface/Buttons.png"
-dest_files=["res://.godot/imported/Buttons.png-21f5191bd5a626f471536828ad74f10f.ctex"]
+source_file="res://addons/SpritesheetGenerator/Checker.png"
+dest_files=["res://.godot/imported/Checker.png-95b82ca4c05ab143e1e16c56d598421b.ctex"]
 
 [params]
 

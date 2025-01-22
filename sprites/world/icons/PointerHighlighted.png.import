@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr1bbrb1d0bto"
-path="res://.godot/imported/PointerHighlighted.png-55ad0ca8f61b0563f52057ff6072cce7.ctex"
+path="res://.godot/imported/pointerHighlighted.png-27ea923f6b4491d784e4f90f3e0376d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/world/icons/PointerHighlighted.png"
-dest_files=["res://.godot/imported/PointerHighlighted.png-55ad0ca8f61b0563f52057ff6072cce7.ctex"]
+source_file="res://sprites/world/icons/pointerHighlighted.png"
+dest_files=["res://.godot/imported/pointerHighlighted.png-27ea923f6b4491d784e4f90f3e0376d2.ctex"]
 
 [params]
 

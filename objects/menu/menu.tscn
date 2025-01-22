@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://p6kes3rf8cma"]
 
-[ext_resource type="Script" path="res://scripts/Menu/Menu.cs" id="1_gwv30"]
-[ext_resource type="AnimationLibrary" uid="uid://bid5jimjy88il" path="res://assets/animations/Blinking.res" id="2_7wvqs"]
-[ext_resource type="Texture2D" uid="uid://br8bmvyur3r5o" path="res://sprites/backgrounds/Art7.jpg" id="2_yes6w"]
+[ext_resource type="Script" path="res://scripts/menu/menu.cs" id="1_gwv30"]
+[ext_resource type="AnimationLibrary" uid="uid://bid5jimjy88il" path="res://assets/animations/blinking.res" id="2_7wvqs"]
+[ext_resource type="Texture2D" uid="uid://br8bmvyur3r5o" path="res://sprites/backgrounds/art7.jpg" id="2_yes6w"]
 [ext_resource type="Shader" path="res://Resourses/Shaders/Menu.gdshader" id="4_1jyxo"]
 [ext_resource type="Shader" path="res://Resourses/Shaders/TV_Effect.gdshader" id="4_c0ghv"]
-[ext_resource type="Texture2D" uid="uid://bniekamv6pw7s" path="res://sprites/menus/MainMenu/TV_Background.png" id="4_i2ou8"]
-[ext_resource type="Texture2D" uid="uid://diw27ycix3pxc" path="res://sprites/menus/MainMenu/Buttons.png" id="5_x6hk4"]
-[ext_resource type="Texture2D" uid="uid://cdh1vvyxit54h" path="res://sprites/menus/MainMenu/TV.png" id="6_nvb4g"]
-[ext_resource type="Script" path="res://scripts/Menu/MainMenuButtons.cs" id="9_afer7"]
+[ext_resource type="Texture2D" uid="uid://bniekamv6pw7s" path="res://sprites/menus/mainMenu/TV_Background.png" id="4_i2ou8"]
+[ext_resource type="Texture2D" uid="uid://diw27ycix3pxc" path="res://sprites/menus/mainMenu/buttons.png" id="5_x6hk4"]
+[ext_resource type="Texture2D" uid="uid://cdh1vvyxit54h" path="res://sprites/menus/mainMenu/TV.png" id="6_nvb4g"]
+[ext_resource type="Script" path="res://scripts/menu/mainMenuButtons.cs" id="9_afer7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rhfjq"]
 shader = ExtResource("4_1jyxo")

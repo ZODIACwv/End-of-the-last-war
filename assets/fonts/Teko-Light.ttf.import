@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://brlen6hha8ik2"
-path="res://.godot/imported/Teko-Light.ttf-e6e83bb03c411dfcd00dd0bd99bffb64.fontdata"
+path="res://.godot/imported/teko-Light.ttf-4f147712a5fa28ed73fc6c2134ffbab1.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Teko-Light.ttf"
-dest_files=["res://.godot/imported/Teko-Light.ttf-e6e83bb03c411dfcd00dd0bd99bffb64.fontdata"]
+source_file="res://assets/fonts/teko-Light.ttf"
+dest_files=["res://.godot/imported/teko-Light.ttf-4f147712a5fa28ed73fc6c2134ffbab1.fontdata"]
 
 [params]
 
