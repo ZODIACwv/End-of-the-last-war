@@ -39,7 +39,7 @@ public class Chunk
 
 				TileRegion region = Core.tileAtlas.Find(colorHtml);
 
-				if (region == null) {
+				if (region is null) {
 					GD.Print($"Pixel at ({x}, {y}): {colorHtml}");
 					continue;
 				}

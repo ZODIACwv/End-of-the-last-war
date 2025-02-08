@@ -12,16 +12,18 @@ config_version=5
 
 config/name="End of the last war"
 config/version="0.008"
-run/main_scene="res://objects/game/game.tscn"
+run/main_scene="res://core/ui/inventory/inventory.tscn"
 config/features=PackedStringArray("4.3", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0.00572708, 0.200915, 0.877436, 1)
-boot_splash/image="res://assets/root/avatar.png"
-config/icon="res://assets/root/avatar.png"
+boot_splash/image="res://assets/root/avatar2.png"
+boot_splash/fullsize=false
+config/icon="res://assets/root/avatar2.png"
 
 [display]
 
-window/size/viewport_width=500
-window/size/viewport_height=400
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 window/size/transparent=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
@@ -50,6 +52,10 @@ folder_colors={
 "res://scripts/both/": "red",
 "res://sprites/": "yellow"
 }
+
+[gui]
+
+common/snap_controls_to_pixels=false
 
 [input]
 
