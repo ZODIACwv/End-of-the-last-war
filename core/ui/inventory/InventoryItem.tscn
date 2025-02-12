@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://pnbwtbto60hv"]
 
-[ext_resource type="Script" path="res://core/ui/inventory/InventoryItemView.cs" id="1_lx3eg"]
+[ext_resource type="Script" path="res://core/ui/inventory/InventoryItemView.cs" id="1_2qidu"]
 [ext_resource type="Texture2D" uid="uid://dd01qqnch3ey4" path="res://core/ui/inventory/AK74.jpg" id="2_atob1"]
 [ext_resource type="FontFile" uid="uid://bxpdklaysak0r" path="res://core/ui/inventory/fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Black.ttf" id="3_c4jpm"]
 
@@ -18,8 +18,9 @@ clip_contents = true
 custom_minimum_size = Vector2(32, 32)
 offset_right = 32.0
 offset_bottom = 32.0
+mouse_force_pass_scroll_events = false
 color = Color(0.4, 0.4, 0.4, 0.54902)
-script = ExtResource("1_lx3eg")
+script = ExtResource("1_2qidu")
 
 [node name="ItemTexture" type="TextureRect" parent="."]
 z_index = 11

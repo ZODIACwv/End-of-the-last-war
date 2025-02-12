@@ -1,11 +1,11 @@
-﻿using Godot;
+using Godot;
 
 public partial class InventoryRoot : Control
 {
     [Export] public byte borderRadius = 1;
-    Inventory inventory;
-    InventoryView inventoryView;
-    PackedScene draggableItem;
+    
+    public InventoryView inventoryView;
+    public Inventory inventory;
 
     public override void _Ready()
     {
@@ -22,14 +22,11 @@ public partial class InventoryRoot : Control
         grid.Columns = (int)(grid.Size.X / TextureRuntimeSettings.slotSize);
 
         inventory = new((byte)grid.Columns, (byte)(grid.Size.Y / TextureRuntimeSettings.slotSize));
-        inventoryView = GetChild<InventoryView>(1).Initialize(inventory);
+        inventoryView = GetChild<InventoryView>(2).Initialize(inventory);
 
         // adding item
-        var item = new AK74(0, 0, 50);
-        inventoryView.AddItem(item);
-    }
-    public override void _Input(InputEvent @event)
-    {
-        
+        InventoryItem item = new AK74(2, 1, 50);
+        inventory.Add(item);
+        inventoryView.UpdateItem(item);
     }
 }

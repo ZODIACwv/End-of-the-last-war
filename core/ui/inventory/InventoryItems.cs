@@ -2,13 +2,13 @@
 
 public sealed class AK74 : InventoryWeapon
 {
-    public AK74(byte positionY, byte positionX, byte endurance) =>
+    public AK74(byte positionX, byte positionY, byte endurance) =>
         Init(
             texture = GD.Load<Texture2D>("res://core/ui/inventory/AK74.jpg"),
             name = "AK74",
             description = "The child of legendary AK47",
-            positionY,
             positionX,
+            positionY,
             width = 6,
             height = 2,
             weight = 3.63f,

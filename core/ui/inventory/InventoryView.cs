@@ -1,50 +1,34 @@
 using Godot;
 
-public partial class InventoryView : GridContainer
+public partial class InventoryView : Control
 {
-	Inventory inventory;
+	public Inventory inventory;
+	public InventoryGridView inventoryGridView;
+	public PackedScene InventoryItemPrefab;
 	public InventoryView Initialize(Inventory inventory)
 	{
-		this.inventory = inventory;
-		var slot = GD.Load<PackedScene>("res://core/ui/inventory/InventorySlot.tscn");
-		foreach (InventorySlot e in inventory.grid)
-			AddChild(slot.Instantiate());
+        this.inventory = inventory;
+		inventoryGridView = GetNode<InventoryGridView>("../Grid").Initialize(inventory);
+		InventoryItemPrefab = GD.Load<PackedScene>("res://core/ui/inventory/InventoryItem.tscn");
 		return this;
 	}
-	public void UpdateView()
-	{
-		/*for (byte i = 0; i < inventory.grid.Length; i++) {
-			InventorySlotView slot = inventory.grid[i % inventory.width, i / inventory.width];
-			if (slot.itemSlot.item is not null && slot.itemSlot.isGeneralItemSlot)
-			{
-				
-			}
-		}*/
-	}
+	public void UpdateView() => GD.Print("UpdateView invoked");
 	public void UpdateItem(InventoryItem item)
 	{
-		var addableItem = GD.Load<PackedScene>("res://core/ui/inventory/InventoryItem.tscn").Instantiate() as InventoryItemView;
-        var addableItemTextureRect = addableItem.GetChildren()[0] as TextureRect;
-        var addableItemEndurance = addableItem.GetChildren()[1] as ProgressBar;
-
-        addableItem.Size = new(item.width * TextureRuntimeSettings.slotSize, item.height * TextureRuntimeSettings.slotSize);
-		addableItem.Position = new();
-		addableItemTextureRect.Texture = item.texture;
-		addableItemTextureRect.Position = new();
-        addableItemEndurance.Visible = !item.IsStackable;
-        addableItemEndurance.Value = item.endurance ?? 0;
-
-        GetChildren()[item.PositionX + item.PositionY * inventory.width].AddChild(addableItem);
+		InventoryItemView itemView = InventoryItemPrefab.Instantiate<InventoryItemView>();
+		itemView.Size = new(item.width * TextureRuntimeSettings.slotSize, item.height * TextureRuntimeSettings.slotSize);
+		itemView.GetChild<TextureRect>(0).Texture = item.texture;
+        var progressBar = itemView.GetChild<ProgressBar>(1);
+        if (!item.IsStackable)
+		{
+			progressBar.Visible = true;
+			progressBar.Value = (double)item.endurance;
+		}
+		else 
+			progressBar.Visible = false;
+		itemView.Position = new(item.PositionX * TextureRuntimeSettings.slotSize, item.PositionY * TextureRuntimeSettings.slotSize);
+		AddChild(itemView);
 	}
-	public void AddItem(InventoryItem item) {
-		inventory.Add(item);
-		UpdateItem(item);
-	}
-	
-	// TODO
-	public void Increase(byte posY, byte posX, uint quantity) => inventory.Increase(posY, posX, quantity);
-	public void Remove(byte posY, byte posX) => inventory.Remove(posY, posX);
-	public void Decrease(byte posY, byte posX, uint quantity) => inventory.Decrease(posY, posX, quantity);
 }
 
 public class Inventory
@@ -80,9 +64,15 @@ public class Inventory
 			for (byte x = 0; x < item.PositionX + item.width; x++)
 				grid[x, y].item = item;
 	}
-
+	public void Remove(InventoryItem item) 
+	{
+		grid[item.positionX, item.positionY].isGeneralItemSlot = false;
+		for (byte x = 0; x < item.width; x++)
+			for (byte y = 0; y < item.height; y++)
+				grid[x, y].item = null;
+	}
+	
 	// TODO
 	public void Increase(byte posY, byte posX, uint quantity) { }
-	public void Remove(byte posY, byte posX) { }
 	public void Decrease(byte posY, byte posX, uint quantity) { }
 }
