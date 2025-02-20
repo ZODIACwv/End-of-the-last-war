@@ -14,8 +14,7 @@ corner_detail = 1
 
 [node name="InventoryItem" type="ColorRect"]
 z_index = 10
-clip_contents = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(160, 64)
 offset_right = 32.0
 offset_bottom = 32.0
 mouse_force_pass_scroll_events = false
@@ -29,8 +28,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 608.0
-offset_bottom = 224.0
+offset_right = 480.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.25, 0.25)

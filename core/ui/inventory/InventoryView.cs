@@ -1,24 +1,32 @@
 using Godot;
+using System.Collections.Generic;
 
 public partial class InventoryView : Control
 {
 	public Inventory inventory;
 	public InventoryGridView inventoryGridView;
-	public PackedScene InventoryItemPrefab;
-	public InventoryView Initialize(Inventory inventory)
+	InventoryRoot inventoryRoot;
+	PackedScene InventoryItemPrefab;
+	Dictionary<InventoryItemView, ushort> displayedItems;
+
+	public InventoryView Initialize(InventoryRoot inventoryRoot)
 	{
-        this.inventory = inventory;
+		this.inventoryRoot = inventoryRoot;
+        inventory = inventoryRoot.inventory;
+		displayedItems = new Dictionary<InventoryItemView, ushort>();
 		inventoryGridView = GetNode<InventoryGridView>("../Grid").Initialize(inventory);
 		InventoryItemPrefab = GD.Load<PackedScene>("res://core/ui/inventory/InventoryItem.tscn");
+		MouseFilter = MouseFilterEnum.Ignore;
 		return this;
 	}
 	public void UpdateView() => GD.Print("UpdateView invoked");
-	public void UpdateItem(InventoryItem item)
+	public void UpdateItemAdd(InventoryItem item)
 	{
 		InventoryItemView itemView = InventoryItemPrefab.Instantiate<InventoryItemView>();
+		itemView.item = item;
 		itemView.Size = new(item.width * TextureRuntimeSettings.slotSize, item.height * TextureRuntimeSettings.slotSize);
 		itemView.GetChild<TextureRect>(0).Texture = item.texture;
-        var progressBar = itemView.GetChild<ProgressBar>(1);
+        ProgressBar progressBar = itemView.GetChild<ProgressBar>(1);
         if (!item.IsStackable)
 		{
 			progressBar.Visible = true;
@@ -26,9 +34,28 @@ public partial class InventoryView : Control
 		}
 		else 
 			progressBar.Visible = false;
-		itemView.Position = new(item.PositionX * TextureRuntimeSettings.slotSize, item.PositionY * TextureRuntimeSettings.slotSize);
+
+		itemView.Position = new(
+			item.positionX * TextureRuntimeSettings.slotSize + inventoryRoot.borderRadius, 
+			item.positionY * TextureRuntimeSettings.slotSize + inventoryRoot.borderRadius
+		);
+
+		displayedItems.Add(itemView, (ushort)GetChildCount());
 		AddChild(itemView);
 	}
+	public void UpdateItemRemove(InventoryItemView itemView)
+	{
+		itemView.QueueFree();
+	}
+    public void SnapToGrid(Vector2I? cellPosition, InventoryItemView itemView)
+    {
+        inventory.Remove(itemView.item);
+        UpdateItemRemove(itemView);
+        itemView.item.positionX = (byte)cellPosition.Value.X;
+        itemView.item.positionY = (byte)cellPosition.Value.Y;
+        inventory.Add(itemView.item);
+		UpdateItemAdd(itemView.item);
+    }
 }
 
 public class Inventory
@@ -49,27 +76,36 @@ public class Inventory
 	}
 	public bool CanPlaceItem(InventoryItem item)
 	{
-		if (item.PositionX + item.width > grid.GetLength(1) || item.PositionY + item.height > grid.GetLength(0)) return false;
-		for (byte y = item.PositionY; y < item.PositionY + item.height; y++)
-			for (byte x = item.PositionX; x < item.PositionX + item.width; x++)
-				if (!grid[y, x].CanPlaceItem())
+		if (item.positionX + item.width > width || item.positionY + item.height > height) return false;
+		for (byte y = item.positionY; y < item.positionY + item.height; y++)
+			for (byte x = item.positionX; x < item.positionX + item.width; x++)
+				if (!grid[x, y].CanPlaceItem())
 					return false;
 		return true;
 	}
-	public void Add(InventoryItem item)
+	public bool CanPlaceItem(Vector2I? cellPos, InventoryItem item)
+	{
+		if (cellPos.Value.X + item.width > width || cellPos.Value.Y + item.height > height) return false;
+		for (int y = cellPos.Value.Y; y < cellPos.Value.Y + item.height; y++)
+			for (int x = cellPos.Value.X; x < cellPos.Value.X + item.width; x++)
+				if (!grid[x, y].CanPlaceItem())
+					return false;
+        return true;
+    }
+    public void Add(InventoryItem item)
 	{
 		if (!CanPlaceItem(item)) return;
-		grid[item.PositionX, item.PositionY].isGeneralItemSlot = true;
-		for (byte y = 0; y < item.PositionY + item.height; y++)
-			for (byte x = 0; x < item.PositionX + item.width; x++)
+		grid[item.positionX, item.positionY].isGeneralItemSlot = true;
+		for (byte y = item.positionY; y < item.positionY + item.height; y++)
+			for (byte x = item.positionX; x < item.positionX + item.width; x++)
 				grid[x, y].item = item;
 	}
 	public void Remove(InventoryItem item) 
 	{
 		grid[item.positionX, item.positionY].isGeneralItemSlot = false;
-		for (byte x = 0; x < item.width; x++)
-			for (byte y = 0; y < item.height; y++)
-				grid[x, y].item = null;
+        for (byte y = item.positionY; y < item.positionY + item.height; y++)
+            for (byte x = item.positionX; x < item.positionX + item.width; x++)
+                grid[x, y].item = null;
 	}
 	
 	// TODO

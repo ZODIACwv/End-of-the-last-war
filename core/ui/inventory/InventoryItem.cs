@@ -38,14 +38,6 @@ public abstract class InventoryItem
             quantity = value;
         }
     }
-    public byte PositionX
-    {
-        get => positionX;
-    }
-    public byte PositionY
-    {
-        get => positionY;
-    }
 }
 
 public abstract class InventoryWeapon : InventoryItem

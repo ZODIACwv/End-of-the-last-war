@@ -11,9 +11,12 @@ public partial class InventoryRoot : Control
     {
         // Root copied:
         TextureRuntimeSettings.slotSize = 32;
+        TextureRuntimeSettings.inventoryScale = 1f;
         TextureRuntimeSettings.slotNormal = GD.Load<Texture2D>("res://core/ui/inventory/slot.png");
         TextureRuntimeSettings.slotHighlightedPositive = GD.Load<Texture2D>("res://core/ui/inventory/slotHighlightedPositive.png");
         TextureRuntimeSettings.slotHighlightedNegative = GD.Load<Texture2D>("res://core/ui/inventory/slotHighlightedNegative.png");
+
+        MouseFilter = MouseFilterEnum.Ignore;
 
         // setting up the layout, inventory size should be evaluate with (n*TextureRuntimeSettings.slotSize + b*2), where n - slot quantity and b - border radius
         var grid = GetNode<GridContainer>("Grid");
@@ -22,11 +25,15 @@ public partial class InventoryRoot : Control
         grid.Columns = (int)(grid.Size.X / TextureRuntimeSettings.slotSize);
 
         inventory = new((byte)grid.Columns, (byte)(grid.Size.Y / TextureRuntimeSettings.slotSize));
-        inventoryView = GetChild<InventoryView>(2).Initialize(inventory);
+        inventoryView = GetChild<InventoryView>(2).Initialize(this);
 
+        
         // adding item
         InventoryItem item = new AK74(2, 1, 50);
+        InventoryItem item2 = new AK74(2, 3, 75);
         inventory.Add(item);
-        inventoryView.UpdateItem(item);
+        inventory.Add(item2);
+        inventoryView.UpdateItemAdd(item);
+        inventoryView.UpdateItemAdd(item2);
     }
 }
