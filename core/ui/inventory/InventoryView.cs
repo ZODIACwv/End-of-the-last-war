@@ -25,7 +25,7 @@ public partial class InventoryView : Control
 		InventoryItemView itemView = InventoryItemPrefab.Instantiate<InventoryItemView>();
 		itemView.item = item;
 		itemView.Size = new(item.width * TextureRuntimeSettings.slotSize, item.height * TextureRuntimeSettings.slotSize);
-		itemView.GetChild<TextureRect>(0).Texture = item.texture;
+		itemView.GetNode<TextureRect>("ItemTexture").Texture = item.texture;
         ProgressBar progressBar = itemView.GetChild<ProgressBar>(1);
         if (!item.IsStackable)
 		{

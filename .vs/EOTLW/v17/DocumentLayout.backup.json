@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Projects\\Godot\\EndOfTheLastWar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\ui\\inventory\\inventoryroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\ui\\inventory\\inventoryroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\ui\\inventory\\inventorygridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\ui\\inventory\\inventorygridview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\ui\\inventory\\inventoryitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\ui\\inventory\\inventoryitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\ui\\inventory\\inventoryitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\ui\\inventory\\inventoryitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\ui\\inventory\\inventoryview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\ui\\inventory\\inventoryview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\ui\\inventory\\inventoryroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\ui\\inventory\\inventoryroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,12 +41,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "InventoryItems.cs",
+              "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryItems.cs",
+              "RelativeDocumentMoniker": "core\\ui\\inventory\\InventoryItems.cs",
+              "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryItems.cs",
+              "RelativeToolTip": "core\\ui\\inventory\\InventoryItems.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:56:12.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "InventoryRoot.cs",
               "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryRoot.cs",
               "RelativeDocumentMoniker": "core\\ui\\inventory\\InventoryRoot.cs",
               "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryRoot.cs",
               "RelativeToolTip": "core\\ui\\inventory\\InventoryRoot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T11:14:52.765Z",
               "EditorCaption": ""
@@ -58,38 +67,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InventoryGridView.cs",
-              "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryGridView.cs",
-              "RelativeDocumentMoniker": "core\\ui\\inventory\\InventoryGridView.cs",
-              "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryGridView.cs",
-              "RelativeToolTip": "core\\ui\\inventory\\InventoryGridView.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T10:58:51.298Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InventoryItemView.cs",
-              "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryItemView.cs",
-              "RelativeDocumentMoniker": "core\\ui\\inventory\\InventoryItemView.cs",
-              "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryItemView.cs",
-              "RelativeToolTip": "core\\ui\\inventory\\InventoryItemView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T07:36:45.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "InventoryView.cs",
               "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryView.cs",
               "RelativeDocumentMoniker": "core\\ui\\inventory\\InventoryView.cs",
               "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\ui\\inventory\\InventoryView.cs",
               "RelativeToolTip": "core\\ui\\inventory\\InventoryView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwB8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T20:34:15.172Z"
+              "WhenOpened": "2025-02-14T20:34:15.172Z",
+              "EditorCaption": ""
             }
           ]
         }
