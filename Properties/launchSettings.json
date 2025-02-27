@@ -8,10 +8,10 @@
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	},
-	"Godot Debug InventoryItem": {
+	"Godot Debug Global": {
 	  "commandName": "Executable",
 	  "executablePath": "C:/Program Files (x86)/godot_dotnet/Godot_v4.3-stable_mono_win64.exe",
-	  "commandLineArgs": "--upwards ./core/ui/inventory/InventoryItem.tscn --verbose",
+	  "commandLineArgs": "--upwards ./core/content/global.tscn --verbose",
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	}
