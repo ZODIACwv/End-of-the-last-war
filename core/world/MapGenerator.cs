@@ -14,40 +14,49 @@ public partial class MapGenerator : Node2D
     {
         terrainImage = terrainTexture.GetImage();
         roadsImage = roadsTexture.GetImage();
-        
+
         GenerateMap();
     }
 
     void GenerateMap()
     {
-
         for (int x = 0; x < terrainImage.GetWidth(); x++)
+        {
             for (int y = 0; y < terrainImage.GetHeight(); y++)
             {
-                terrainLayer.SetCell(new Vector2I(x, y), GetTerrainType(terrainImage.GetPixel(x, y)), Vector2I.Zero);
+                terrainLayer.SetCell(new Vector2I(x, y), (int)GetTerrainType(terrainImage.GetPixel(x, y)), Vector2I.Zero);
 
-                Color roadColor = roadsImage.GetPixel(x, y);
-                if (IsRoad(roadColor))
-                    roadsLayer.SetCell(new Vector2I(x, y), (int)TilesIDs.road, Vector2I.Zero);
+                if (IsRoad(roadsImage.GetPixel(x, y)))
+                {
+                    roadsLayer.SetCell(new Vector2I(x, y), 0, Vector2I.Zero, -1);
+                }
             }
+        }
+
+        roadsLayer.UpdateInternals();
     }
 
-    int GetTerrainType(Color color)
+    public TilesIDs GetTerrainTypeAt(Vector2I tilePosition) => GetTerrainType(terrainImage.GetPixel(tilePosition.X, tilePosition.Y), roadsImage.GetPixel(tilePosition.X, tilePosition.Y));
+
+    static TilesIDs GetTerrainType(Color terrainPixel, Color roadPixel) => IsRoad(roadPixel) ? TilesIDs.road : GetTerrainType(terrainPixel);
+
+    static TilesIDs GetTerrainType(Color color)
     {
-        if (color.Equals(new Color(0f, 1f, 0f))) return (int)TilesIDs.grass;
-        else if (color.Equals(new Color(1f, 1f, 0f))) return (int)TilesIDs.radioactiveWasteland;
-        else if (color.Equals(new Color(0f, 0f, 1f))) return (int)TilesIDs.sea;
-        return -1;
+        if (color.Equals(new Color(0f, 1f, 0f))) return TilesIDs.grass;
+        else if (color.Equals(new Color(1f, 1f, 0f))) return TilesIDs.radioactiveWasteland;
+        else if (color.Equals(new Color(0f, 0f, 1f))) return TilesIDs.sea;
+        return TilesIDs.none;
     }
 
-    bool IsRoad(Color color) => color.R > 0.5f && color.G > 0.5f && color.B > 0.5f;
+    static bool IsRoad(Color color) => color.R > 0.5f && color.G > 0.5f && color.B > 0.5f;
 }
 
-enum TilesIDs : int
+public enum TilesIDs : short
 {
     road = 0,
-    grass = 1,
-    wasteland = 2,
-    radioactiveWasteland = 3,
-    sea = 4
+    none = 1,
+    grass = 2,
+    wasteland = 3,
+    radioactiveWasteland = 4,
+    sea = 5
 }

@@ -25,15 +25,17 @@ public partial class InventoryView : Control
 		InventoryItemView itemView = InventoryItemPrefab.Instantiate<InventoryItemView>();
 		itemView.item = item;
 		itemView.Size = new(item.width * TextureRuntimeSettings.slotSize, item.height * TextureRuntimeSettings.slotSize);
-		itemView.GetNode<TextureRect>("ItemTexture").Texture = item.texture;
-        ProgressBar progressBar = itemView.GetChild<ProgressBar>(1);
+		itemView.itemTexture.Size = new(item.width * 4 * TextureRuntimeSettings.slotSize, item.height * 4 * TextureRuntimeSettings.slotSize);
+		itemView.itemTexture.Texture = item.texture;
+		itemView.name.Text = item.name;
+
         if (!item.IsStackable)
 		{
-			progressBar.Visible = true;
-			progressBar.Value = (double)item.endurance;
+			itemView.endurance.Visible = true;
+            itemView.endurance.Value = (double)item.endurance;
 		}
-		else 
-			progressBar.Visible = false;
+		else
+            itemView.endurance.Visible = false;
 
 		itemView.Position = new(
 			item.positionX * TextureRuntimeSettings.slotSize + inventoryRoot.borderRadius, 
@@ -43,10 +45,7 @@ public partial class InventoryView : Control
 		displayedItems.Add(itemView, (ushort)GetChildCount());
 		AddChild(itemView);
 	}
-	public void UpdateItemRemove(InventoryItemView itemView)
-	{
-		itemView.QueueFree();
-	}
+	public void UpdateItemRemove(InventoryItemView itemView) =>	itemView.QueueFree();
     public void SnapToGrid(Vector2I? cellPosition, InventoryItemView itemView)
     {
         inventory.Remove(itemView.item);

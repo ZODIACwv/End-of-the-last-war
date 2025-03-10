@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://k6w0icbo18sy"]
+
+[ext_resource type="PackedScene" uid="uid://c3dcrga7rh3wc" path="res://core/content/map.tscn" id="1_fqigr"]
+[ext_resource type="Script" path="res://core/Root.cs" id="1_gicb6"]
+[ext_resource type="PackedScene" uid="uid://biyhqhpp7ayps" path="res://core/content/GUI.tscn" id="3_v44g7"]
+[ext_resource type="Texture2D" uid="uid://qfgtohen2q4l" path="res://sprites/world/icons/pointer.png" id="3_wj3jh"]
+[ext_resource type="Texture2D" uid="uid://dv4a3u5oi8064" path="res://sprites/player/global/icon.png" id="4_gbycs"]
+[ext_resource type="Script" path="res://core/scripts/PlayerOnMap/PlayerOnMap.cs" id="6_yf181"]
+[ext_resource type="Script" path="res://core/scripts/PlayerOnMap/CameraTransform.cs" id="7_cjlne"]
+
+[node name="GameMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gicb6")
+
+[node name="MapGenerator" parent="." instance=ExtResource("1_fqigr")]
+
+[node name="Pointer" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_wj3jh")
+offset = Vector2(0, -32)
+
+[node name="PlayerIcon" type="Sprite2D" parent="." node_paths=PackedStringArray("mapGenerator")]
+scale = Vector2(3, 3)
+texture = ExtResource("4_gbycs")
+script = ExtResource("6_yf181")
+mapGenerator = NodePath("../MapGenerator")
+
+[node name="GameScreen" type="Camera2D" parent="." node_paths=PackedStringArray("mapGenerator", "pointer", "playerIcon", "zoomIndependentNodes")]
+editor_draw_limits = true
+script = ExtResource("7_cjlne")
+mapGenerator = NodePath("../MapGenerator")
+pointer = NodePath("../Pointer")
+playerIcon = NodePath("../PlayerIcon")
+zoomIndependentNodes = [NodePath("../PlayerIcon"), NodePath("../Pointer")]
+
+[node name="GUI" parent="GameScreen" instance=ExtResource("3_v44g7")]
+visible = false

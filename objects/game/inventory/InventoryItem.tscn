@@ -11,29 +11,27 @@ corner_detail = 1
 bg_color = Color(0.772549, 0.772549, 0.772549, 1)
 corner_detail = 1
 
-[node name="InventoryItem" type="ColorRect"]
+[node name="InventoryItem" type="ColorRect" node_paths=PackedStringArray("itemTexture", "endurance", "name")]
 z_index = 10
-custom_minimum_size = Vector2(160, 64)
-offset_right = 32.0
-offset_bottom = 32.0
+custom_minimum_size = Vector2(32, 32)
+offset_right = 64.0
+offset_bottom = 64.0
 mouse_force_pass_scroll_events = false
 color = Color(0.4, 0.4, 0.4, 0.54902)
 script = ExtResource("1_2qidu")
+itemTexture = NodePath("ItemTexture")
+endurance = NodePath("Endurance")
+name = NodePath("ItemName")
 
 [node name="ItemTexture" type="TextureRect" parent="."]
 z_index = 11
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 480.0
-offset_bottom = 192.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 256.0
+offset_bottom = 256.0
 scale = Vector2(0.25, 0.25)
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="Endurance" type="ProgressBar" parent="."]
 visible = false
 z_index = 11
 custom_minimum_size = Vector2(2, 32)

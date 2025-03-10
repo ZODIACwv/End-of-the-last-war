@@ -1,0 +1,40 @@
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://dcdlyv0irvnwp"]
+
+[ext_resource type="Texture2D" uid="uid://mi0pn5bhm3bm" path="res://core/resource/map/tiles/road.png" id="1_vaouv"]
+[ext_resource type="Texture2D" uid="uid://bf88ytxt1pj6m" path="res://core/resource/map/tiles/Field.png" id="2_nx4j7"]
+[ext_resource type="Texture2D" uid="uid://c7o17la8ltvnv" path="res://core/resource/map/tiles/wasteland.png" id="3_bktgm"]
+[ext_resource type="Texture2D" uid="uid://bptjo7q5a1jl1" path="res://core/resource/map/tiles/radioactiveWasteland.png" id="4_0rdod"]
+[ext_resource type="Texture2D" uid="uid://djrshmluc6scj" path="res://core/resource/map/tiles/sea.png" id="5_xpp13"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lh3al"]
+texture = ExtResource("1_vaouv")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ki5ui"]
+texture = ExtResource("2_nx4j7")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdmiu"]
+texture = ExtResource("3_bktgm")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4sqw2"]
+texture = ExtResource("4_0rdod")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qdx5"]
+texture = ExtResource("5_xpp13")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(128, 128)
+sources/5 = SubResource("TileSetAtlasSource_0qdx5")
+sources/4 = SubResource("TileSetAtlasSource_4sqw2")
+sources/3 = SubResource("TileSetAtlasSource_pdmiu")
+sources/2 = SubResource("TileSetAtlasSource_ki5ui")
+sources/1 = SubResource("TileSetAtlasSource_lh3al")

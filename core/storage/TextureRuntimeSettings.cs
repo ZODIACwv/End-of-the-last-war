@@ -2,6 +2,7 @@
 
 public static class TextureRuntimeSettings
 {
+    public static short tileSize;
     public static ushort slotSize;
     public static float inventoryScale;
     public static Texture2D slotNormal;

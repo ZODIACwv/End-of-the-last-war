@@ -1,12 +1,16 @@
 using Godot;
 public partial class InventoryItemView : ColorRect
 {
+    [Export] public TextureRect itemTexture;
+    [Export] public ProgressBar endurance;
+    [Export] public RichTextLabel name;
     internal InventoryItem item;
     Inventory inventory;
     InventoryView inventoryView;
     InventoryGridView inventoryGridView;
     TextureRect inventoryItemTexture;
     TextureRect draggingItem;
+
     public override void _Ready()
     {
         InventoryRoot inventoryRoot = GetNode<InventoryRoot>("../..");

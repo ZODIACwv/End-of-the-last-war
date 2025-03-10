@@ -4,6 +4,7 @@ public partial class Root : Node
 {
     public override void _Ready() {
         //GameDataLoader.Load();
+        TextureRuntimeSettings.tileSize = 128;
         TextureRuntimeSettings.slotSize = 32;
         TextureRuntimeSettings.inventoryScale = 1f;
         TextureRuntimeSettings.slotNormal = GD.Load<Texture2D>("res://sprites/player/inventory/slot.png");
