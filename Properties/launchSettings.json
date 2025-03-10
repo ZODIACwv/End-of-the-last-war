@@ -8,10 +8,10 @@
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	},
-	"Godot Debug GameMain": {
+	"Godot Debug MapGenerator": {
 	  "commandName": "Executable",
 	  "executablePath": "C:/Program Files (x86)/godot_dotnet/Godot_v4.3-stable_mono_win64.exe",
-	  "commandLineArgs": "--upwards ./core/content/GameMain.tscn --verbose",
+	  "commandLineArgs": "--upwards ./core/content/map.tscn --verbose",
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	}

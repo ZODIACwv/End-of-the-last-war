@@ -24,17 +24,34 @@ public partial class MapGenerator : Node2D
         {
             for (int y = 0; y < terrainImage.GetHeight(); y++)
             {
-                terrainLayer.SetCell(new Vector2I(x, y), (int)GetTerrainType(terrainImage.GetPixel(x, y)), Vector2I.Zero);
+                Vector2I tilePos = new(x, y);
+
+                terrainLayer.SetCell(tilePos, (int)GetTerrainType(terrainImage.GetPixel(x, y)), Vector2I.Zero);
 
                 if (IsRoad(roadsImage.GetPixel(x, y)))
                 {
-                    roadsLayer.SetCell(new Vector2I(x, y), 0, Vector2I.Zero, -1);
+                    roadsLayer.SetCell(tilePos, (int)RoadTilesIDs.road, Vector2I.Zero);
+                    roadsLayer.UpdateInternals();
                 }
             }
         }
 
         roadsLayer.UpdateInternals();
     }
+
+
+    /*void GenerateMap()
+    {
+        for (int x = 0; x < terrainImage.GetWidth(); x++)
+            for (int y = 0; y < terrainImage.GetHeight(); y++)
+            {
+                //terrainLayer.SetCell(new Vector2I(x, y), (int)GetTerrainType(terrainImage.GetPixel(x, y)), Vector2I.Zero);
+
+                if (IsRoad(roadsImage.GetPixel(x, y)))
+                    roadsLayer.SetCell(new Vector2I(x, y), (int)RoadTilesIDs.road, new Vector2I(0, 0));
+            }
+        roadsLayer.UpdateInternals();
+    }*/
 
     public TilesIDs GetTerrainTypeAt(Vector2I tilePosition) => GetTerrainType(terrainImage.GetPixel(tilePosition.X, tilePosition.Y), roadsImage.GetPixel(tilePosition.X, tilePosition.Y));
 
@@ -59,4 +76,9 @@ public enum TilesIDs : short
     wasteland = 3,
     radioactiveWasteland = 4,
     sea = 5
+}
+
+public enum RoadTilesIDs : short
+{
+    road = 0
 }

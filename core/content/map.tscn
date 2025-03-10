@@ -1,98 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3dcrga7rh3wc"]
+[gd_scene load_steps=6 format=3 uid="uid://c3dcrga7rh3wc"]
 
 [ext_resource type="Script" path="res://core/world/MapGenerator.cs" id="1_42ont"]
 [ext_resource type="Texture2D" uid="uid://cg7ayhen66n8e" path="res://core/resource/map/terrain.png" id="2_j1ppp"]
 [ext_resource type="Texture2D" uid="uid://ntxttny5ae4n" path="res://core/resource/map/roads.png" id="3_cjfhu"]
 [ext_resource type="TileSet" uid="uid://dcdlyv0irvnwp" path="res://core/resource/map/map.tres" id="4_7an84"]
-[ext_resource type="Texture2D" uid="uid://d30165dnjgxb" path="res://core/resource/map/tiles/RoadTileSet.png" id="5_edh3l"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkb2o"]
-texture = ExtResource("5_edh3l")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/terrain_set = 0
-0:0/0/terrain = 0
-0:0/0/terrains_peering_bit/bottom_side = 0
-0:0/0/terrains_peering_bit/top_side = 0
-0:1/0 = 0
-0:1/0/terrain_set = 0
-0:1/0/terrain = 0
-0:1/0/terrains_peering_bit/right_side = 0
-0:1/0/terrains_peering_bit/bottom_side = 0
-0:2/0 = 0
-0:2/0/terrain_set = 0
-0:2/0/terrain = 0
-0:2/0/terrains_peering_bit/right_side = 0
-0:2/0/terrains_peering_bit/top_side = 0
-1:2/0 = 0
-1:2/0/terrain_set = 0
-1:2/0/terrain = 0
-1:2/0/terrains_peering_bit/left_side = 0
-1:2/0/terrains_peering_bit/top_side = 0
-1:1/0 = 0
-1:1/0/terrain_set = 0
-1:1/0/terrain = 0
-1:1/0/terrains_peering_bit/bottom_side = 0
-1:1/0/terrains_peering_bit/left_side = 0
-2:2/0 = 0
-2:2/0/terrain_set = 0
-2:2/0/terrain = 0
-2:2/0/terrains_peering_bit/bottom_side = 0
-2:2/0/terrains_peering_bit/left_side = 0
-2:2/0/terrains_peering_bit/top_side = 0
-2:1/0 = 0
-2:1/0/terrain_set = 0
-2:1/0/terrain = 0
-2:1/0/terrains_peering_bit/right_side = 0
-2:1/0/terrains_peering_bit/bottom_side = 0
-2:1/0/terrains_peering_bit/top_side = 0
-1:0/0 = 0
-1:0/0/terrain_set = 0
-1:0/0/terrain = 0
-1:0/0/terrains_peering_bit/right_side = 0
-1:0/0/terrains_peering_bit/left_side = 0
-2:0/0 = 0
-2:0/0/terrain_set = 0
-2:0/0/terrain = 0
-2:0/0/terrains_peering_bit/right_side = 0
-2:0/0/terrains_peering_bit/bottom_side = 0
-2:0/0/terrains_peering_bit/left_side = 0
-2:0/0/terrains_peering_bit/top_side = 0
-3:0/0 = 0
-3:0/0/terrain_set = 0
-3:0/0/terrain = 0
-3:0/0/terrains_peering_bit/right_side = 0
-3:0/0/terrains_peering_bit/bottom_side = 0
-3:0/0/terrains_peering_bit/left_side = 0
-3:1/0 = 0
-3:1/0/terrain_set = 0
-3:1/0/terrain = 0
-3:1/0/terrains_peering_bit/right_side = 0
-3:1/0/terrains_peering_bit/left_side = 0
-3:1/0/terrains_peering_bit/top_side = 0
-4:2/0 = 0
-4:2/0/terrain_set = 0
-4:2/0/terrain = 0
-4:2/0/terrains_peering_bit/left_side = 0
-3:2/0 = 0
-3:2/0/terrain_set = 0
-3:2/0/terrain = 0
-3:2/0/terrains_peering_bit/right_side = 0
-4:1/0 = 0
-4:1/0/terrain_set = 0
-4:1/0/terrain = 0
-4:1/0/terrains_peering_bit/top_side = 0
-4:0/0 = 0
-4:0/0/terrain_set = 0
-4:0/0/terrain = 0
-4:0/0/terrains_peering_bit/bottom_side = 0
-
-[sub_resource type="TileSet" id="TileSet_am16b"]
-tile_size = Vector2i(128, 128)
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Road"
-terrain_set_0/terrain_0/color = Color(0.417544, 0.162521, 0.15477, 1)
-sources/0 = SubResource("TileSetAtlasSource_dkb2o")
+[ext_resource type="TileSet" uid="uid://d1bqiedc5q86l" path="res://core/resource/RoadTileSet.tres" id="5_rm8dp"]
 
 [node name="MapGenerator" type="Node2D" node_paths=PackedStringArray("terrainLayer", "roadsLayer")]
 script = ExtResource("1_42ont")
@@ -102,9 +14,9 @@ terrainLayer = NodePath("TerrainLayer")
 roadsLayer = NodePath("RoadsLayer")
 
 [node name="TerrainLayer" type="TileMapLayer" parent="."]
+visible = false
 tile_set = ExtResource("4_7an84")
 
 [node name="RoadsLayer" type="TileMapLayer" parent="."]
-z_index = 1
 position = Vector2(60, 39)
-tile_set = SubResource("TileSet_am16b")
+tile_set = ExtResource("5_rm8dp")

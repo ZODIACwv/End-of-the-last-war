@@ -9,18 +9,22 @@ public partial class PlayerOnMap : Sprite2D
     public double speed = 100.0f;
 
     TilesIDs currentBiome = TilesIDs.none;
+    public delegate void OnBiomeChangedEvent(TilesIDs newBiome);
+    public OnBiomeChangedEvent OnBiomeChanged;
+
+    public override void _Ready() => OnBiomeChanged += ChangePlayerSpeedToBiome;
 
     public override void _Process(double delta)
     {
-        TilesIDs newBiome = mapGenerator.GetTerrainTypeAt(GetPlayerTilePosition());
+        if (!isMoving) return;
 
-        if (newBiome != currentBiome)
+        TilesIDs newBiome = mapGenerator.GetTerrainTypeAt(GetPlayerTilePosition());
+        if (currentBiome != newBiome)
         {
-            OnBiomeChanged(currentBiome, newBiome);
+            OnBiomeChanged(newBiome);
             currentBiome = newBiome;
         }
-
-        if (!isMoving) return;
+        
         Vector2 velocity = (targetPosition - Position).Normalized() * (float)(speed * delta);
 
         if (Position.DistanceTo(targetPosition) < velocity.Length())
@@ -44,8 +48,9 @@ public partial class PlayerOnMap : Sprite2D
         return new Vector2I((int)globalPosition.X / TextureRuntimeSettings.tileSize, (int)globalPosition.Y / TextureRuntimeSettings.tileSize);
     }
 
-    void OnBiomeChanged(TilesIDs oldBiome, TilesIDs newBiome)
+    void ChangePlayerSpeedToBiome(TilesIDs newBiome)
     {
+        SM.Log(newBiome);
         speed = 100 * newBiome switch
         {
             TilesIDs.road => 1.1,

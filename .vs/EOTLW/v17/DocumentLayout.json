@@ -36,10 +36,9 @@
               "RelativeDocumentMoniker": "core\\scripts\\PlayerOnMap\\PlayerOnMap.cs",
               "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\scripts\\PlayerOnMap\\PlayerOnMap.cs",
               "RelativeToolTip": "core\\scripts\\PlayerOnMap\\PlayerOnMap.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwDQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T16:03:06.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-08T16:03:06.786Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "core\\world\\MapGenerator.cs",
               "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\world\\MapGenerator.cs",
               "RelativeToolTip": "core\\world\\MapGenerator.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-01T22:45:24.564Z",
               "EditorCaption": ""

@@ -19,7 +19,7 @@ public partial class InventoryView : Control
 		MouseFilter = MouseFilterEnum.Ignore;
 		return this;
 	}
-	public void UpdateView() => GD.Print("UpdateView invoked");
+	public void UpdateView() => SM.Log("UpdateView invoked");
 	public void UpdateItemAdd(InventoryItem item)
 	{
 		InventoryItemView itemView = InventoryItemPrefab.Instantiate<InventoryItemView>();
