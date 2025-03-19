@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://co6rj2slosw48"]
 
 [ext_resource type="Texture2D" uid="uid://dk81qs5b5jfiv" path="res://sprites/player/inventory/slot.png" id="1_in6tl"]
-[ext_resource type="Script" path="res://core/scripts/inventory/InventorySlotView.cs" id="2_3g5pt"]
+[ext_resource type="Script" uid="uid://cya47qql4rvbg" path="res://core/scripts/inventory/InventorySlotView.cs" id="2_3g5pt"]
 
 [node name="InventorySlot" type="TextureRect"]
 z_index = 3

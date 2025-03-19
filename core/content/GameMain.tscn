@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://k6w0icbo18sy"]
 
 [ext_resource type="PackedScene" uid="uid://c3dcrga7rh3wc" path="res://core/content/map.tscn" id="1_fqigr"]
-[ext_resource type="Script" path="res://core/Root.cs" id="1_gicb6"]
+[ext_resource type="Script" uid="uid://br1u5ay2g10xl" path="res://core/Root.cs" id="1_gicb6"]
 [ext_resource type="PackedScene" uid="uid://biyhqhpp7ayps" path="res://core/content/GUI.tscn" id="3_v44g7"]
 [ext_resource type="Texture2D" uid="uid://qfgtohen2q4l" path="res://sprites/world/icons/pointer.png" id="3_wj3jh"]
 [ext_resource type="Texture2D" uid="uid://dv4a3u5oi8064" path="res://sprites/player/global/icon.png" id="4_gbycs"]
-[ext_resource type="Script" path="res://core/scripts/PlayerOnMap/PlayerOnMap.cs" id="6_yf181"]
-[ext_resource type="Script" path="res://core/scripts/PlayerOnMap/CameraTransform.cs" id="7_cjlne"]
+[ext_resource type="Script" uid="uid://dk400wtjvgird" path="res://core/scripts/PlayerOnMap/PlayerOnMap.cs" id="6_yf181"]
+[ext_resource type="Script" uid="uid://b6ksc10xjk32s" path="res://core/scripts/PlayerOnMap/CameraTransform.cs" id="7_cjlne"]
 
 [node name="GameMain" type="Control"]
 layout_mode = 3

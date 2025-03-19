@@ -42,15 +42,10 @@ public partial class PlayerOnMap : Sprite2D
         isMoving = true;
     }
 
-    Vector2I GetPlayerTilePosition()
-    {
-        Vector2 globalPosition = GlobalPosition;
-        return new Vector2I((int)globalPosition.X / TextureRuntimeSettings.tileSize, (int)globalPosition.Y / TextureRuntimeSettings.tileSize);
-    }
+    Vector2I GetPlayerTilePosition() => new((int)GlobalPosition.X / TextureRuntimeSettings.tileSize, (int)GlobalPosition.Y / TextureRuntimeSettings.tileSize);
 
     void ChangePlayerSpeedToBiome(TilesIDs newBiome)
     {
-        SM.Log(newBiome);
         speed = 100 * newBiome switch
         {
             TilesIDs.road => 1.1,

@@ -19,29 +19,7 @@ public partial class MapGenerator : Node2D
     }
 
     void GenerateMap()
-    {
-        for (int x = 0; x < terrainImage.GetWidth(); x++)
-        {
-            for (int y = 0; y < terrainImage.GetHeight(); y++)
-            {
-                Vector2I tilePos = new(x, y);
-
-                terrainLayer.SetCell(tilePos, (int)GetTerrainType(terrainImage.GetPixel(x, y)), Vector2I.Zero);
-
-                if (IsRoad(roadsImage.GetPixel(x, y)))
-                {
-                    roadsLayer.SetCell(tilePos, (int)RoadTilesIDs.road, Vector2I.Zero);
-                    roadsLayer.UpdateInternals();
-                }
-            }
-        }
-
-        roadsLayer.UpdateInternals();
-    }
-
-
-    /*void GenerateMap()
-    {
+    {/*
         for (int x = 0; x < terrainImage.GetWidth(); x++)
             for (int y = 0; y < terrainImage.GetHeight(); y++)
             {
@@ -50,8 +28,17 @@ public partial class MapGenerator : Node2D
                 if (IsRoad(roadsImage.GetPixel(x, y)))
                     roadsLayer.SetCell(new Vector2I(x, y), (int)RoadTilesIDs.road, new Vector2I(0, 0));
             }
-        roadsLayer.UpdateInternals();
-    }*/
+        roadsLayer.UpdateInternals();*/
+
+        Godot.Collections.Array<Vector2I> cells = [];
+
+        for (int x = 0; x < terrainImage.GetWidth(); x++)
+            for (int y = 0; y < terrainImage.GetHeight(); y++)
+                if (IsRoad(roadsImage.GetPixel(x, y)))
+                    cells.Add(new Vector2I(x, y));
+
+        roadsLayer.SetCellsTerrainConnect(cells, 0, 0);
+    }
 
     public TilesIDs GetTerrainTypeAt(Vector2I tilePosition) => GetTerrainType(terrainImage.GetPixel(tilePosition.X, tilePosition.Y), roadsImage.GetPixel(tilePosition.X, tilePosition.Y));
 
@@ -76,9 +63,4 @@ public enum TilesIDs : short
     wasteland = 3,
     radioactiveWasteland = 4,
     sea = 5
-}
-
-public enum RoadTilesIDs : short
-{
-    road = 0
 }

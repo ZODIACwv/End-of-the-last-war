@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://cwpbxp20dbw1e"]
 
 [ext_resource type="Texture2D" uid="uid://bsdu12av4cx88" path="res://sprites/backgrounds/art8.png" id="1_7icuj"]
-[ext_resource type="Script" path="res://scripts/bootstrap/bootstrap.cs" id="1_nogke"]
+[ext_resource type="Script" uid="uid://b84r1s0xpmhnj" path="res://scripts/bootstrap/bootstrap.cs" id="1_nogke"]
 [ext_resource type="Texture2D" uid="uid://oaq0ansswurr" path="res://assets/effects/edgeGradientBlackout.png" id="2_wocgg"]
 [ext_resource type="Texture2D" uid="uid://d4k2mkp5nbt5b" path="res://sprites/both/circleLoaderAtlas.tres" id="4_3aa0g"]
-[ext_resource type="Script" path="res://scripts/both/loaderRotation.cs" id="5_c1hm8"]
+[ext_resource type="Script" uid="uid://cynhvsyxa071c" path="res://scripts/both/loaderRotation.cs" id="5_c1hm8"]
 [ext_resource type="AnimationLibrary" uid="uid://bid5jimjy88il" path="res://assets/animations/blinking.res" id="6_n1qdj"]
 
 [sub_resource type="Animation" id="Animation_ynuya"]
@@ -24,7 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qiv2j"]
 _data = {
-"RESET": SubResource("Animation_ynuya")
+&"RESET": SubResource("Animation_ynuya")
 }
 
 [node name="Control" type="Control"]

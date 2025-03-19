@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3dcrga7rh3wc"]
 
-[ext_resource type="Script" path="res://core/world/MapGenerator.cs" id="1_42ont"]
+[ext_resource type="Script" uid="uid://cxlb3u5tewjsv" path="res://core/world/MapGenerator.cs" id="1_42ont"]
 [ext_resource type="Texture2D" uid="uid://cg7ayhen66n8e" path="res://core/resource/map/terrain.png" id="2_j1ppp"]
 [ext_resource type="Texture2D" uid="uid://ntxttny5ae4n" path="res://core/resource/map/roads.png" id="3_cjfhu"]
 [ext_resource type="TileSet" uid="uid://dcdlyv0irvnwp" path="res://core/resource/map/map.tres" id="4_7an84"]

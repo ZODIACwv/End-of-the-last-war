@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://pnbwtbto60hv"]
 
-[ext_resource type="Script" path="res://core/scripts/inventory/InventoryItemView.cs" id="1_2qidu"]
+[ext_resource type="Script" uid="uid://50h5atyfsp2f" path="res://core/scripts/inventory/InventoryItemView.cs" id="1_2qidu"]
 [ext_resource type="FontFile" uid="uid://bxpdklaysak0r" path="res://core/scripts/inventory/fontpack/fonts/source-code-pro/source-code-pro-2.010R-ro-1.030R-it/TTF/SourceCodePro-Black.ttf" id="3_c4jpm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs7cy"]

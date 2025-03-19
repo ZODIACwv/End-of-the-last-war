@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmekvj3yuqnxb"]
 
-[ext_resource type="Script" path="res://core/scripts/inventory/InventoryRoot.cs" id="1_j2g47"]
-[ext_resource type="Script" path="res://core/scripts/inventory/InventoryGridView.cs" id="2_b7qcm"]
-[ext_resource type="Script" path="res://core/scripts/inventory/InventoryView.cs" id="3_vw51t"]
+[ext_resource type="Script" uid="uid://c6v8k1ciqeno7" path="res://core/scripts/inventory/InventoryRoot.cs" id="1_j2g47"]
+[ext_resource type="Script" uid="uid://dbyb16uiflosx" path="res://core/scripts/inventory/InventoryGridView.cs" id="2_b7qcm"]
+[ext_resource type="Script" uid="uid://dwueerhmt33q2" path="res://core/scripts/inventory/InventoryView.cs" id="3_vw51t"]
 
 [node name="Inventory" type="Control"]
 custom_minimum_size = Vector2(258, 322)
