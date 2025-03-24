@@ -46,7 +46,7 @@ public partial class MapGenerator : Node2D
 
     static TilesIDs GetTerrainType(Color color)
     {
-        if (color.Equals(new Color(0f, 1f, 0f))) return TilesIDs.grass;
+        if (color.Equals(new Color(0f, 1f, 0f))) return TilesIDs.field;
         else if (color.Equals(new Color(1f, 1f, 0f))) return TilesIDs.radioactiveWasteland;
         else if (color.Equals(new Color(0f, 0f, 1f))) return TilesIDs.sea;
         return TilesIDs.none;
@@ -59,7 +59,7 @@ public enum TilesIDs : short
 {
     road = 0,
     none = 1,
-    grass = 2,
+    field = 2,
     wasteland = 3,
     radioactiveWasteland = 4,
     sea = 5
