@@ -29,6 +29,7 @@ public partial class InventoryItemView : ColorRect
         if (@event is InputEventMouseMotion motionEvent && draggingItem is not null)
                 DragMove(motionEvent);
     }
+
     void StartDragMove()
     {
         draggingItem = new()

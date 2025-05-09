@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Projects\\Godot\\EndOfTheLastWar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\scripts\\playeronmap\\playeronmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\scripts\\playeronmap\\playeronmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\world\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\world\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|c:\\projects\\godot\\endofthelastwar\\core\\scripts\\inventory\\inventoryitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0AD8427-C5C2-48BB-881B-DDE3BA452D29}|EOTLW.csproj|solutionrelative:core\\scripts\\inventory\\inventoryitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +14,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 179,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d375ef0d-9946-4920-bae8-e432ebc42c55}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -31,27 +31,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerOnMap.cs",
-              "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\scripts\\PlayerOnMap\\PlayerOnMap.cs",
-              "RelativeDocumentMoniker": "core\\scripts\\PlayerOnMap\\PlayerOnMap.cs",
-              "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\scripts\\PlayerOnMap\\PlayerOnMap.cs",
-              "RelativeToolTip": "core\\scripts\\PlayerOnMap\\PlayerOnMap.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAjwCMAAAARAAAAAAAAAA==",
+              "Title": "InventoryItemView.cs",
+              "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\scripts\\inventory\\InventoryItemView.cs",
+              "RelativeDocumentMoniker": "core\\scripts\\inventory\\InventoryItemView.cs",
+              "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\scripts\\inventory\\InventoryItemView.cs",
+              "RelativeToolTip": "core\\scripts\\inventory\\InventoryItemView.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wCoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T16:03:06.786Z",
+              "WhenOpened": "2025-04-19T08:46:18.317Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MapGenerator.cs",
-              "DocumentMoniker": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\world\\MapGenerator.cs",
-              "RelativeDocumentMoniker": "core\\world\\MapGenerator.cs",
-              "ToolTip": "C:\\Projects\\Godot\\EndOfTheLastWar\\core\\world\\MapGenerator.cs",
-              "RelativeToolTip": "core\\world\\MapGenerator.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T22:45:24.564Z"
             }
           ]
         }

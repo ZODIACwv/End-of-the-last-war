@@ -8,10 +8,10 @@
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	},
-	"Godot Debug GameMain": {
+	"Godot Debug Inventory": {
 	  "commandName": "Executable",
 	  "executablePath": "C:/Program Files/GODOT/Godot_v4.4-stable_mono_win64.exe",
-	  "commandLineArgs": "--upwards ./core/content/GameMain.tscn --verbose",
+	  "commandLineArgs": "--upwards ./core/content/inventory.tscn --verbose",
 	  "workingDirectory": ".",
 	  "nativeDebugging": true
 	}
